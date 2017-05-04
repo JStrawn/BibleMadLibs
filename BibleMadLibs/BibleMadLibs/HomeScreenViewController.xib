@@ -19,6 +19,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="BibleMadLibs" customModuleProvider="target">
             <connections>
                 <outlet property="playButton" destination="1k0-X6-8qu" id="F9t-kM-0WG"/>
+                <outlet property="tutorialButton" destination="em2-Vz-LtS" id="d1M-sO-cSd"/>
+                <outlet property="verseOfTheDayText" destination="1FK-0M-xFu" id="8Mk-lY-KjW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,8 +32,14 @@
                 <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="sLJ-P1-3jX">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".........." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF0-Rh-hXM">
+                    <rect key="frame" x="107" y="511" width="161.5" height="88"/>
+                    <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="80"/>
+                    <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k0-X6-8qu">
-                    <rect key="frame" x="117" y="484" width="142" height="99"/>
+                    <rect key="frame" x="116.5" y="483.5" width="142" height="100"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
                     <size key="titleShadowOffset" width="-3" height="3"/>
                     <state key="normal" title="PLAY">
@@ -46,35 +54,68 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="White Bird" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-7P-QIu">
-                    <rect key="frame" x="273" y="505" width="87" height="87"/>
+                    <rect key="frame" x="272.5" y="504.5" width="87.5" height="87.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ONA-7P-QIu" secondAttribute="height" multiplier="1:1" id="ceZ-LU-6j4"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="reverse white bird" translatesAutoresizingMaskIntoConstraints="NO" id="chx-Ck-EW7">
-                    <rect key="frame" x="15" y="504" width="88" height="88"/>
+                    <rect key="frame" x="15" y="504.5" width="87.5" height="87.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="chx-Ck-EW7" secondAttribute="height" multiplier="1:1" id="9Cz-Jw-tR9"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em2-Vz-LtS">
+                    <rect key="frame" x="-25" y="583.5" width="426" height="100"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="57"/>
+                    <size key="titleShadowOffset" width="-3" height="3"/>
+                    <state key="normal" title="TUTORIAL">
+                        <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acts 10:14 But Peter said, “Certainly not, Lord, for I have never eaten anything defiled and ritually unclean!”" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-0M-xFu">
+                    <rect key="frame" x="19" y="292" width="337.5" height="83.5"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                    <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse of the Day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-lS-CKb">
+                    <rect key="frame" x="67.5" y="248" width="240" height="31"/>
+                    <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="30"/>
+                    <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1C0-Nz-QCC"/>
+                <constraint firstItem="em2-Vz-LtS" firstAttribute="height" secondItem="1k0-X6-8qu" secondAttribute="height" id="32U-hp-VcF"/>
                 <constraint firstAttribute="bottom" secondItem="chx-Ck-EW7" secondAttribute="bottom" constant="75" id="4Ca-WM-hTH"/>
+                <constraint firstItem="EbG-lS-CKb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-70" id="9CA-jk-cTJ"/>
                 <constraint firstItem="sLJ-P1-3jX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AT8-gg-Pin"/>
+                <constraint firstItem="em2-Vz-LtS" firstAttribute="top" secondItem="1k0-X6-8qu" secondAttribute="bottom" id="B4I-L6-35w"/>
+                <constraint firstAttribute="bottom" secondItem="RF0-Rh-hXM" secondAttribute="bottom" constant="68" id="Bkd-0U-6G0"/>
+                <constraint firstItem="1FK-0M-xFu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="9/10" id="De7-FU-EKw"/>
                 <constraint firstItem="sLJ-P1-3jX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HAl-4j-6q2"/>
+                <constraint firstItem="1FK-0M-xFu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HWi-B8-IJ8"/>
                 <constraint firstAttribute="trailing" secondItem="ONA-7P-QIu" secondAttribute="trailing" constant="15" id="IEd-Aw-td3"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="J25-BI-zZd"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/5" id="LcK-PA-ue5"/>
+                <constraint firstItem="EbG-lS-CKb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PeY-tp-T33"/>
                 <constraint firstItem="ONA-7P-QIu" firstAttribute="leading" secondItem="1k0-X6-8qu" secondAttribute="trailing" constant="14" id="QCP-Ga-szp"/>
                 <constraint firstAttribute="bottom" secondItem="sLJ-P1-3jX" secondAttribute="bottom" id="Sou-VT-ltS"/>
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="leading" secondItem="chx-Ck-EW7" secondAttribute="trailing" constant="14" id="VFD-y1-XEe"/>
+                <constraint firstItem="RF0-Rh-hXM" firstAttribute="top" secondItem="iyQ-JQ-hg3" secondAttribute="bottom" constant="377" id="VpB-Rd-nBX"/>
                 <constraint firstAttribute="bottom" secondItem="ONA-7P-QIu" secondAttribute="bottom" constant="75" id="Wd4-iS-bfB"/>
                 <constraint firstAttribute="trailing" secondItem="sLJ-P1-3jX" secondAttribute="trailing" id="Z8q-qi-E9e"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zvd-NV-CjC"/>
+                <constraint firstItem="em2-Vz-LtS" firstAttribute="width" secondItem="1k0-X6-8qu" secondAttribute="width" multiplier="3" id="cxe-vU-DJN"/>
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="200" id="hzR-Zy-EQD"/>
+                <constraint firstItem="1FK-0M-xFu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oyf-T2-qPi"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ozi-wI-ebe"/>
+                <constraint firstItem="RF0-Rh-hXM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uOi-hv-YBA"/>
+                <constraint firstItem="em2-Vz-LtS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xMS-FU-RdT"/>
                 <constraint firstItem="chx-Ck-EW7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="zAB-Ec-R9D"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="53.5"/>
