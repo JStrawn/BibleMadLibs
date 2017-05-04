@@ -21,20 +21,20 @@ class ViewController: UIViewController, CAAnimationDelegate {
         super.viewDidLoad()
         animate()
         
-   
-        
     }
 
+    
+    
     func animate() {
         
-        self.loadingImage.image = UIImage(named: "bird")
+        self.loadingImage.image = UIImage(named: "White Bird")
         
         UIView.animate(withDuration: 0.3, animations: {
             self.loadingImage.transform = CGAffineTransform(scaleX: 6.5, y: 6.5)
             self.loadingImage.alpha = 0.0
             self.loadingView.alpha = 0.0
         }) { (finished) in
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: 0.1, animations: {
                 self.loadingImage.isHidden = true
                 self.loadingImage.transform = CGAffineTransform.identity
                 self.loadingView.isHidden = true

@@ -12,8 +12,7 @@
 		C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B301EBB9D8000283732 /* Main.storyboard */; };
 		C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B331EBB9D8000283732 /* Assets.xcassets */; };
 		C38D0B371EBB9D8000283732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B351EBB9D8000283732 /* LaunchScreen.storyboard */; };
-		C38D0B401EBBA19700283732 /* ResultsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B3E1EBBA19700283732 /* ResultsPageViewController.swift */; };
-		C38D0B411EBBA19700283732 /* ResultsPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B3F1EBBA19700283732 /* ResultsPageViewController.xib */; };
+		E86878A01EBBB08B003988B2 /* DataAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868789F1EBBB08B003988B2 /* DataAccessObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +23,7 @@
 		C38D0B331EBB9D8000283732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38D0B361EBB9D8000283732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C38D0B381EBB9D8000283732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C38D0B3E1EBBA19700283732 /* ResultsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsPageViewController.swift; sourceTree = "<group>"; };
-		C38D0B3F1EBBA19700283732 /* ResultsPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsPageViewController.xib; sourceTree = "<group>"; };
+		E868789F1EBBB08B003988B2 /* DataAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
