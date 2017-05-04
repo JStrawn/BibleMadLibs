@@ -11,6 +11,8 @@ import UIKit
 class HomeScreenViewController: UIViewController {
 
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var tutorialButton: UIButton!
+    @IBOutlet weak var verseOfTheDayText: UILabel!
     
     
     override func viewDidLoad() {
