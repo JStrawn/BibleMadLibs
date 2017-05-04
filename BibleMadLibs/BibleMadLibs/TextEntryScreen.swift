@@ -9,8 +9,16 @@
 import UIKit
 
 class TextEntryScreen: UIViewController {
-
+    @IBOutlet weak var wordsLeft: UILabel!
+    @IBOutlet weak var enterABlank: UILabel!
+    @IBOutlet weak var textInputField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    
     override func viewDidLoad() {
+       
+       
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
