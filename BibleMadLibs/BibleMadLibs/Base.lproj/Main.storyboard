@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BibleMadLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzZ-JE-huk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-VH-nnf">
+                                        <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mQ7-VH-nnf" secondAttribute="height" multiplier="1:1" id="Mf3-MR-Mc4"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mQ7-VH-nnf" firstAttribute="leading" secondItem="OzZ-JE-huk" secondAttribute="leading" constant="87" id="39Z-SJ-MgX"/>
+                                    <constraint firstItem="mQ7-VH-nnf" firstAttribute="centerX" secondItem="OzZ-JE-huk" secondAttribute="centerX" id="4Xx-ur-l9y"/>
+                                    <constraint firstItem="mQ7-VH-nnf" firstAttribute="centerY" secondItem="OzZ-JE-huk" secondAttribute="centerY" id="MCQ-Of-AJl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OzZ-JE-huk" secondAttribute="bottom" id="571-my-TCt"/>
+                            <constraint firstItem="OzZ-JE-huk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5aS-Bs-85K"/>
+                            <constraint firstAttribute="trailing" secondItem="OzZ-JE-huk" secondAttribute="trailing" id="c6D-sV-g6e"/>
+                            <constraint firstItem="OzZ-JE-huk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y4t-0T-954"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingImage" destination="mQ7-VH-nnf" id="oJ4-qf-iHg"/>
+                        <outlet property="loadingView" destination="OzZ-JE-huk" id="teR-aP-440"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

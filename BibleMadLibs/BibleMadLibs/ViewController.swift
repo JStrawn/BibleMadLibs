@@ -7,19 +7,41 @@
 //
 
 import UIKit
+import QuartzCore
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CAAnimationDelegate {
+    
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loadingImage: UIImageView!
+
+    
+    //var mask : CALayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        animate()
+        
+   
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    func animate() {
+        
+        self.loadingImage.image = UIImage(named: "bird")
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.loadingImage.transform = CGAffineTransform(scaleX: 6.5, y: 6.5)
+            self.loadingImage.alpha = 0.0
+            self.loadingView.alpha = 0.0
+        }) { (finished) in
+            UIView.animate(withDuration: 0.4, animations: {
+                self.loadingImage.isHidden = true
+                self.loadingImage.transform = CGAffineTransform.identity
+                self.loadingView.isHidden = true
 
+            })
+        }
+    }
 
 }
 
