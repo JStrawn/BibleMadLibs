@@ -60,6 +60,7 @@
 			children = (
 				C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */,
 				C38D0B2E1EBB9D8000283732 /* ViewController.swift */,
+				E868789F1EBBB08B003988B2 /* DataAccessObject.swift */,
 				C38D0B301EBB9D8000283732 /* Main.storyboard */,
 				C38D0B3E1EBBA19700283732 /* ResultsPageViewController.swift */,
 				C38D0B3F1EBBA19700283732 /* ResultsPageViewController.xib */,
@@ -147,6 +148,7 @@
 				C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */,
 				C38D0B401EBBA19700283732 /* ResultsPageViewController.swift in Sources */,
 				C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */,
+				E86878A01EBBB08B003988B2 /* DataAccessObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +314,7 @@
 				C38D0B3D1EBB9D8000283732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
