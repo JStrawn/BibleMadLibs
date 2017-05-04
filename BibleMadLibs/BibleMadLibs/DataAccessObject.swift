@@ -12,6 +12,8 @@ import Foundation
 class DataAccessObject {
     static let sharedManager = DataAccessObject()
     
+    var typesOfWords = [String]()
+    
     func downloadPassage(book:String, chapter:Int, lowerVerse:Int, upperVerse:Int, completion:@escaping (_ text:String) -> Void) {
         
         let urlString = "http://labs.bible.org/api/?passage=\(book)%\(chapter):\(lowerVerse)-\(upperVerse)&type=json&formatting=plain"
@@ -63,9 +65,22 @@ class DataAccessObject {
             
             if let jsonData = try? JSONSerialization.jsonObject(with: myData, options: []) as! [String:Any] {
                 
-                print(jsonData["madlib"] as! String)
+                let passageString = jsonData["madlib"] as! String
+                print(passageString)
                 
-                completion(jsonData["madlib"] as! String)
+                //extract the nouns, verbs, and other word types
+
+                let matches = self.matchesForRegexInText(regex: "\\<(.*?)\\>", text: passageString)
+                print(matches)
+                
+                for match in matches {
+                    let editedMatch = match.replacingOccurrences(of: "<", with: "")
+                    let finalEditedMatch = editedMatch.replacingOccurrences(of: ">", with: "")
+                    
+                    self.typesOfWords.append(finalEditedMatch)
+                }
+                
+                
             }
             
         }.resume()
@@ -90,13 +105,28 @@ class DataAccessObject {
     
     
     func checkForWordTypes(passage: String) {
-        
-        
-        
+
+
     }
     
     
-    
+    func matchesForRegexInText(regex: String!, text: String!) -> [String] {
+        
+        do {
+            
+            let regex = try NSRegularExpression(pattern: regex, options: [])
+            let nsString = text as NSString
+            
+            let results = regex.matches(in: text,
+                                        options: [], range: NSMakeRange(0, nsString.length))
+            return results.map { nsString.substring(with: $0.range)}
+            
+        } catch let error as NSError {
+            
+            print("invalid regex: \(error.localizedDescription)")
+            
+            return []
+        }}
     
     
     
