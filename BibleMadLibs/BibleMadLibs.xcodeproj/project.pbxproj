@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840B3C661EBBBD1700E1C9D2 /* ButtonTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C651EBBBD1700E1C9D2 /* ButtonTest.xib */; };
 		C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */; };
 		C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B2E1EBB9D8000283732 /* ViewController.swift */; };
 		C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B301EBB9D8000283732 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840B3C651EBBBD1700E1C9D2 /* ButtonTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTest.xib; sourceTree = "<group>"; };
 		C38D0B291EBB9D8000283732 /* BibleMadLibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleMadLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38D0B2E1EBB9D8000283732 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +62,12 @@
 			children = (
 				C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */,
 				C38D0B2E1EBB9D8000283732 /* ViewController.swift */,
-				E868789F1EBBB08B003988B2 /* DataAccessObject.swift */,
 				C38D0B301EBB9D8000283732 /* Main.storyboard */,
 				C38D0B3E1EBBA19700283732 /* ResultsPageViewController.swift */,
 				C38D0B3F1EBBA19700283732 /* ResultsPageViewController.xib */,
 				C38D0B331EBB9D8000283732 /* Assets.xcassets */,
 				C38D0B351EBB9D8000283732 /* LaunchScreen.storyboard */,
+				840B3C651EBBBD1700E1C9D2 /* ButtonTest.xib */,
 				C38D0B381EBB9D8000283732 /* Info.plist */,
 			);
 			path = BibleMadLibs;
@@ -131,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840B3C661EBBBD1700E1C9D2 /* ButtonTest.xib in Resources */,
 				C38D0B411EBBA19700283732 /* ResultsPageViewController.xib in Resources */,
 				C38D0B371EBB9D8000283732 /* LaunchScreen.storyboard in Resources */,
 				C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */,
@@ -148,7 +151,6 @@
 				C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */,
 				C38D0B401EBBA19700283732 /* ResultsPageViewController.swift in Sources */,
 				C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */,
-				E86878A01EBBB08B003988B2 /* DataAccessObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
