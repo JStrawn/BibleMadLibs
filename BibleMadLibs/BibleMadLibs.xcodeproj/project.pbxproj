@@ -15,6 +15,7 @@
 		C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B301EBB9D8000283732 /* Main.storyboard */; };
 		C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B331EBB9D8000283732 /* Assets.xcassets */; };
 		C38D0B371EBB9D8000283732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B351EBB9D8000283732 /* LaunchScreen.storyboard */; };
+		C39E00181EBBD9E100F228C4 /* DataAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C38D0B331EBB9D8000283732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38D0B361EBB9D8000283732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C38D0B381EBB9D8000283732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */,
 				C38D0B381EBB9D8000283732 /* Info.plist */,
 				840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */,
+				C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */,
 			);
 			path = BibleMadLibs;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39E00181EBBD9E100F228C4 /* DataAccessObject.swift in Sources */,
 				C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */,
 				C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */,
 				840B3C691EBBBE4900E1C9D2 /* HomeScreenViewController.swift in Sources */,

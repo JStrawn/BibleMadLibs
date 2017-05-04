@@ -72,19 +72,22 @@
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acts 10:14 But Peter said, “Certainly not, Lord, for I have never eaten anything defiled and ritually unclean!”" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-0M-xFu">
-                    <rect key="frame" x="75" y="274" width="225" height="139"/>
+                    <rect key="frame" x="76" y="245" width="225" height="139"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse of the Day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-lS-CKb">
-                    <rect key="frame" x="88" y="241" width="200" height="26"/>
-                    <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="25"/>
+                    <rect key="frame" x="92" y="191" width="192" height="25"/>
+                    <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="24"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="laurel-wreath-white-hi" translatesAutoresizingMaskIntoConstraints="NO" id="Fcg-qH-V5X">
-                    <rect key="frame" x="10" y="194" width="354" height="273"/>
+                <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laurel-wreath-white-hi" translatesAutoresizingMaskIntoConstraints="NO" id="Fcg-qH-V5X">
+                    <rect key="frame" x="5" y="173" width="364" height="281"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fcg-qH-V5X" secondAttribute="height" multiplier="118:91" id="x08-uq-CJI"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,11 +95,12 @@
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1C0-Nz-QCC"/>
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="height" secondItem="1k0-X6-8qu" secondAttribute="height" id="32U-hp-VcF"/>
                 <constraint firstAttribute="bottom" secondItem="chx-Ck-EW7" secondAttribute="bottom" constant="75" id="4Ca-WM-hTH"/>
-                <constraint firstItem="EbG-lS-CKb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-80" id="9CA-jk-cTJ"/>
+                <constraint firstItem="1k0-X6-8qu" firstAttribute="top" secondItem="Fcg-qH-V5X" secondAttribute="bottom" constant="30" id="7SK-MU-8cK"/>
+                <constraint firstItem="EbG-lS-CKb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-130" id="9CA-jk-cTJ"/>
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="top" secondItem="1k0-X6-8qu" secondAttribute="bottom" id="B4I-L6-35w"/>
                 <constraint firstAttribute="bottom" secondItem="RF0-Rh-hXM" secondAttribute="bottom" constant="68" id="Bkd-0U-6G0"/>
-                <constraint firstItem="1FK-0M-xFu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="6/10" id="De7-FU-EKw"/>
-                <constraint firstItem="1FK-0M-xFu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="10" id="HWi-B8-IJ8"/>
+                <constraint firstItem="1FK-0M-xFu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="3/5" id="De7-FU-EKw"/>
+                <constraint firstItem="1FK-0M-xFu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="HWi-B8-IJ8"/>
                 <constraint firstAttribute="trailing" secondItem="ONA-7P-QIu" secondAttribute="trailing" constant="15" id="IEd-Aw-td3"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="J25-BI-zZd"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/5" id="LcK-PA-ue5"/>
@@ -109,7 +113,7 @@
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="width" secondItem="1k0-X6-8qu" secondAttribute="width" multiplier="3" id="cxe-vU-DJN"/>
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="200" id="hzR-Zy-EQD"/>
                 <constraint firstItem="Fcg-qH-V5X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mEI-Sf-FKc"/>
-                <constraint firstItem="Fcg-qH-V5X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="oFU-IM-pKY"/>
+                <constraint firstItem="Fcg-qH-V5X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="oFU-IM-pKY"/>
                 <constraint firstItem="1FK-0M-xFu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oyf-T2-qPi"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ozi-wI-ebe"/>
                 <constraint firstItem="RF0-Rh-hXM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uOi-hv-YBA"/>

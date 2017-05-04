@@ -16,12 +16,15 @@ class ViewController: UIViewController, CAAnimationDelegate {
 
     
     //var mask : CALayer?
+    
+    let mysharedManager = DataAccessObject.sharedManager
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         animate()
         
-       
+        mysharedManager.getNewPassage()
         
     }
 
