@@ -21,6 +21,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
         super.viewDidLoad()
         animate()
         
+       
+        
     }
 
     
@@ -40,6 +42,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
                 self.loadingView.isHidden = true
 
             })
+            let vc = HomeScreenViewController()
+            self.present(vc, animated: false, completion: nil)
         }
     }
 
