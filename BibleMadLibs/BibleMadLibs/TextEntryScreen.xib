@@ -45,18 +45,17 @@
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Place" textAlignment="center" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="GH5-4u-ZLH">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Place" textAlignment="center" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="GH5-4u-ZLH">
                     <rect key="frame" x="52" y="137" width="271" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="c1m-l0-jVW"/>
                     </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="73"/>
+                    <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="30"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-ob-lju">
                     <rect key="frame" x="300" y="305" width="59" height="57"/>
-                    <color key="backgroundColor" red="0.080309486434774133" green="0.087680790925613469" blue="0.39142628205128205" alpha="0.70891702586206895" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
                     <state key="normal" title="Next">
                         <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
