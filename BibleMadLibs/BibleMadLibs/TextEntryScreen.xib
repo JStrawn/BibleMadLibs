@@ -30,7 +30,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Q3R-OA-JdA">
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Q3R-OA-JdA">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-2r-ZLi">
@@ -77,6 +77,16 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvJ-q0-e08">
+                    <rect key="frame" x="10" y="10" width="84" height="39"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                    <state key="normal" title="Main Menu">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="mainMenuButtonWasPressed:" destination="-1" eventType="touchUpInside" id="2jd-wX-si5"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.67793642239999996" colorSpace="calibratedRGB"/>
             <constraints>
@@ -95,10 +105,12 @@
                 <constraint firstAttribute="trailing" secondItem="Ly5-ob-lju" secondAttribute="trailing" constant="16" id="nqX-3f-wbT"/>
                 <constraint firstItem="xGf-2r-ZLi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-250" id="qVh-Qg-fHF"/>
                 <constraint firstItem="Ly5-ob-lju" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="s8q-ae-uJT"/>
+                <constraint firstItem="YvJ-q0-e08" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="wZA-Fu-BJS"/>
                 <constraint firstItem="GH5-4u-ZLH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="x6N-7k-T3L"/>
                 <constraint firstItem="Q3R-OA-JdA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xew-gZ-Rl4"/>
                 <constraint firstItem="xGf-2r-ZLi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y8O-1P-9TD"/>
                 <constraint firstItem="ryK-aA-zJ5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="yTm-9d-Enr"/>
+                <constraint firstItem="YvJ-q0-e08" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="zzl-T5-lA4"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
