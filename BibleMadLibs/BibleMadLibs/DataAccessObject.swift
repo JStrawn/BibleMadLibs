@@ -19,9 +19,11 @@ class DataAccessObject {
     
     var currentPassage:Passage?
     
+    var booksArray = [[String]]()
+    
     func downloadPassage(book:String, chapter:Int, lowerVerse:Int, upperVerse:Int, completion:@escaping (_ text:String) -> Void) {
         
-        let urlString = "http://labs.bible.org/api/?passage=\(book)%\(chapter):\(lowerVerse)-\(upperVerse)&type=json&formatting=plain"
+        let urlString = "http://labs.bible.org/api/?passage=\(book)+\(chapter):\(lowerVerse)-\(upperVerse)&type=json&formatting=plain"
         
         //print(urlString)
         
@@ -108,7 +110,30 @@ class DataAccessObject {
     
     func getNewPassage(completion:@escaping () -> Void) {
         
-        self.downloadPassage(book: "john", chapter: 203, lowerVerse: 16, upperVerse: 20, completion: { (passage) in
+        let randInt = generateRandomNum(value: booksArray.count-1)
+        //print(randInt)
+        
+        let bookName:String = booksArray[randInt][0]
+        print(bookName)
+        
+        let chapterNum:Int = generateRandomNum(value: Int(booksArray[randInt][1])!)
+        print("Chatper: \(chapterNum)")
+        
+        var verseNum = generateRandomNum(value: Int(booksArray[randInt][2])!)
+        
+        if verseNum < 5 {
+            verseNum = 5
+        }
+        
+        let lowerVerseNum:Int = verseNum - 5
+        print("Lower Verse: \(lowerVerseNum)")
+        
+        let upperVerseNum:Int = verseNum
+        print("Upper Verse: \(verseNum)")
+        
+        self.downloadPassage(book: bookName, chapter: chapterNum, lowerVerse: lowerVerseNum, upperVerse: upperVerseNum, completion: { (passage) in
+            
+            //print(passage)
             
             print("\nMadlib-ifying passage\n")
             self.madlibifyPassage(passage: passage, completion: { (text) in
@@ -116,6 +141,11 @@ class DataAccessObject {
                 self.getBlanks(oldPassage: passage, blankPassage: text, completion: { (newPassage) in
                     
                     print("Finished getting new passage")
+                    
+                    newPassage.chapter = bookName
+                    newPassage.lowerVerse = lowerVerseNum
+                    newPassage.upperVerse = upperVerseNum
+                    
                     self.currentPassage = newPassage
                 
                 })
@@ -181,7 +211,35 @@ class DataAccessObject {
     }
     
 
+    func loadDataFromTxtFile() {
+        let filename = "DataFile"
+        
+        if let path = Bundle.main.path(forResource: filename, ofType: nil) {
+            do {
+                let text = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+                
+                let books = text.components(separatedBy: "\n")
+                
+                for bookData in books {
+                    let data = bookData.components(separatedBy: ",")
+                    self.booksArray.append(data)
+                }
+                
+                //print(self.booksArray)
+                
+            } catch {
+                print("Failed to read text")
+            }
+        } else {
+            print("Failed to load file from app bundle")
+        }
+    }
     
-    
+    func generateRandomNum(value:Int) -> Int {
+        let num = value + 1
+        let randomNum = Int(arc4random_uniform(UInt32(num)))
+        
+        return randomNum
+    }
     
 }

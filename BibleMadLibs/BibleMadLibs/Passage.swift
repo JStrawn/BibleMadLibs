@@ -15,6 +15,10 @@ class Passage {
     var blankPassage:String
     var arrayOfBlanks = [String]()
     
+    var chapter:String?
+    var lowerVerse:Int?
+    var upperVerse:Int?
+    
     init(oldString:String, blankString:String, blanks:[String]) {
         self.oldPassage = oldString
         self.blankPassage = blankString

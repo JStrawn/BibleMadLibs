@@ -20,10 +20,11 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mysharedManager.playHeavenSound()
+        //mysharedManager.playHeavenSound()
         //mysharedManager.playStoneGrindSound()
         //mysharedManager.playThunderSound()
 
+        mysharedManager.loadDataFromTxtFile()
 
     }
     
