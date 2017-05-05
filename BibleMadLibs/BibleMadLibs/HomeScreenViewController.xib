@@ -42,19 +42,7 @@
                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="zAR-v9-LDW">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k0-X6-8qu">
-                    <rect key="frame" x="116.5" y="484" width="142" height="100"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
-                    <size key="titleShadowOffset" width="-3" height="3"/>
-                    <state key="normal" title="PLAY">
-                        <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" red="0.052797100559999997" green="0.18772377300000001" blue="0.45641025639999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="playButtonWasTapped:" destination="-1" eventType="touchUpInside" id="FaZ-yk-FZJ"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God-Libs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyQ-JQ-hg3">
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God-Libs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iyQ-JQ-hg3">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
                     <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="96"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,13 +50,13 @@
                     <color key="shadowColor" red="0.052797100559999997" green="0.18772377300000001" blue="0.45641025639999999" alpha="1" colorSpace="calibratedRGB"/>
                     <size key="shadowOffset" width="-8" height="1"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acts 10:14 But Peter said, “Certainly not, Lord, for I have never eaten anything defiled and ritually unclean!”" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-0M-xFu">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acts 10:14 But Peter said, “Certainly not, Lord, for I have never eaten anything defiled and ritually unclean!”" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-0M-xFu">
                     <rect key="frame" x="19" y="272" width="337.5" height="83.5"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse of the Day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-lS-CKb">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse of the Day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-lS-CKb">
                     <rect key="frame" x="92" y="191" width="192" height="25"/>
                     <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="24"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,6 +74,18 @@
                 <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laurel-wreath-white-hi" translatesAutoresizingMaskIntoConstraints="NO" id="Fcg-qH-V5X">
                     <rect key="frame" x="9.5" y="429" width="356" height="200"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k0-X6-8qu">
+                    <rect key="frame" x="116" y="484" width="142" height="100"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="56"/>
+                    <size key="titleShadowOffset" width="-3" height="3"/>
+                    <state key="normal" title="PLAY">
+                        <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.052797100559999997" green="0.18772377300000001" blue="0.45641025639999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="playButtonWasTapped:" destination="-1" eventType="touchUpInside" id="FaZ-yk-FZJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
             <constraints>
@@ -114,7 +114,6 @@
                 <constraint firstItem="zAR-v9-LDW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eZh-Gi-nDR"/>
                 <constraint firstItem="ONA-7P-QIu" firstAttribute="leading" secondItem="EbG-lS-CKb" secondAttribute="trailing" constant="10" id="gKM-HA-ewr"/>
                 <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-5" id="gOw-KP-9aC"/>
-                <constraint firstItem="1k0-X6-8qu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="200" id="hzR-Zy-EQD"/>
                 <constraint firstItem="chx-Ck-EW7" firstAttribute="height" secondItem="ONA-7P-QIu" secondAttribute="height" id="kSc-92-nHc"/>
                 <constraint firstItem="1FK-0M-xFu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oyf-T2-qPi"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ozi-wI-ebe"/>
@@ -124,6 +123,7 @@
                 <constraint firstItem="ONA-7P-QIu" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/10" id="v9s-fa-ZUp"/>
                 <constraint firstItem="EbG-lS-CKb" firstAttribute="leading" secondItem="chx-Ck-EW7" secondAttribute="trailing" constant="10" id="vqV-dC-u5b"/>
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xMS-FU-RdT"/>
+                <constraint firstAttribute="bottom" secondItem="1k0-X6-8qu" secondAttribute="bottom" constant="83" id="zO1-p6-zAz"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
