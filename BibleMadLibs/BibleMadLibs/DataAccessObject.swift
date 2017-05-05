@@ -75,11 +75,13 @@ class DataAccessObject {
                 
                 for match in matches {
                     let editedMatch = match.replacingOccurrences(of: "<", with: "")
-                    let finalEditedMatch = editedMatch.replacingOccurrences(of: ">", with: "")
+                    let secondEditedMatch = editedMatch.replacingOccurrences(of: ">", with: "")
+                    let finalEditedMatch = secondEditedMatch.replacingOccurrences(of: "_", with: " ")
                     
                     self.typesOfWords.append(finalEditedMatch)
                 }
                 
+                print(self.typesOfWords)
                 
             }
             
