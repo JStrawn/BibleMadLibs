@@ -11,7 +11,8 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var madLibTextLabel: UITextView!
-    @IBOutlet weak var stoneImageView: UIImageView!
+    @IBOutlet weak var classicButton: UIButton!
+    
     var isClassic = false
     var finalPassage = String()
     let mysharedManager = DataAccessObject.sharedManager
@@ -20,45 +21,53 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mysharedManager.playStoneGrindSound()
+
         
         var passage = mysharedManager.currentPassage?.blankPassage
         
         for word in userWords {
+
+            
             if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {
                 passage!.replaceSubrange(match, with: word)
+                
             }
             
         }
         
+        //get rid of the api's weird formatting
         var editedPassage = passage!.replacingOccurrences(of: " .", with: ".")
         editedPassage = editedPassage.replacingOccurrences(of: " ,", with: ",")
         editedPassage = editedPassage.replacingOccurrences(of: " :", with: ":")
         
-        //madLibTextLabel.isHidden = true
         editedPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
         finalPassage = editedPassage
         madLibTextLabel.text = editedPassage
     }
     
+    
     @IBAction func classicButtonPressed(_ sender: UIButton){
-
         
         if isClassic == true {
             madLibTextLabel.text = finalPassage
+            classicButton.setTitle("Classic", for: .normal)
             isClassic = false
         }else{
             var ogPassage:String = (mysharedManager.currentPassage?.oldPassage)!
             ogPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
         madLibTextLabel.text = ogPassage
+            classicButton.setTitle("Mad Libs", for: .normal)
             isClassic = true
         }
     }
+    
     
     @IBAction func backToMenuButtonWasTapped(_ sender: UIButton){
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
+    
     
     @IBAction func shareButton(_ sender: Any) {
         // text to share

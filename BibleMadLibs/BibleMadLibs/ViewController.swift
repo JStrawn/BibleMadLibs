@@ -23,7 +23,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         animate()
-        mysharedManager.getRandomVerse()
     }
     
     

@@ -46,6 +46,7 @@ class DataAccessObject {
                     passage += " "
                 }
                 passage = passage.replacingOccurrences(of: "&#8211;", with: "-")
+                passage = passage.replacingOccurrences(of: "&#1495;", with: "חֵ")
                 completion(passage)
             }
             
@@ -138,7 +139,7 @@ class DataAccessObject {
     
     
     func getNewPassage(completion:@escaping () -> Void) {
-              
+   
         let randInt = generateRandomNum(value: booksArray.count-1)
         //print(randInt)
         
@@ -192,31 +193,6 @@ class DataAccessObject {
             })
         })
         
-    }
-    
-    
-    func getRandomVerse() {
-        
-        let url = URL(string: "http://labs.bible.org/api/?passage=random")!
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            //check if we have any data
-            guard let myData = data
-                else {return}
-            
-            
-            //convert our data to JSON dict
-            guard let json = try? JSONSerialization.jsonObject(with: myData, options: []) as? String
-                else {return}
-            
-            print("####\(json ?? "Bible Verse")")
-            
-            DispatchQueue.main.async {}
-            
-            
-            }.resume()
-
     }
     
     

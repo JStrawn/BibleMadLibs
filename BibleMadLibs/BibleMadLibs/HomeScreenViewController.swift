@@ -12,7 +12,6 @@ import UIKit
 class HomeScreenViewController: UIViewController {
 
     @IBOutlet weak var playButton: UIButton!
-//    @IBOutlet weak var tutorialButton: UIButton!
     @IBOutlet weak var verseOfTheDayText: UILabel!
     
     let mysharedManager = DataAccessObject.sharedManager
@@ -22,7 +21,6 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         
         mysharedManager.playHeavenSound()
-        //mysharedManager.playStoneGrindSound()
         //mysharedManager.playThunderSound()
 
         mysharedManager.loadDataFromTxtFile()
@@ -41,7 +39,7 @@ class HomeScreenViewController: UIViewController {
             })
             self.playButton.isEnabled = false
             mysharedManager.getNewPassage(completion: {
-                print(self.mysharedManager.currentPassage!.oldPassage as Any)
+                //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                 self.didDownloadNewPassage = true
                 self.playButton.isEnabled = true
             })
@@ -84,11 +82,6 @@ class HomeScreenViewController: UIViewController {
         
     }
 
-    @IBAction func tutorialButtonWasTapped(_ sender: UIButton){
-        let tutVC = TutorialScreenViewController()
-        self.present(tutVC, animated: true, completion: nil)
-        
-    }
     
     func displayAlert() {
         let alertController = UIAlertController(title: "No Network Detected", message:
