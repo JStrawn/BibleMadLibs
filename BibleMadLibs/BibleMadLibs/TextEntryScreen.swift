@@ -29,7 +29,7 @@ class TextEntryScreen: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         if mysharedManager.currentPassage?.arrayOfBlanks.count == 0 {
-          
+          mysharedManager.currentPassage?.arrayOfBlanks.append("test")
           let resultsVC = ResultsViewController()
           resultsVC.userWords = self.userWords
           self.present(resultsVC, animated: true, completion: nil)
@@ -98,16 +98,26 @@ class TextEntryScreen: UIViewController {
     }
     
     @IBAction func nextButtonWasPressed(_ sender: UIButton) {
-    
-        if (mysharedManager.currentPassage?.arrayOfBlanks.count)! != 0 {
-            let userInputWord = textInputField.text
-            userWords.append(userInputWord!)
-            mysharedManager.currentPassage?.arrayOfBlanks.remove(at: 0)
-            viewWillAppear(true)
-            textInputField.text = ""
-            print(words)
-            print(userWords)
-        }
+     
+     if textInputField.text == "" {
+          let alertController = UIAlertController(title: "Empty Field", message:
+               "You have left an empty field. Please Fill it out.", preferredStyle: UIAlertControllerStyle.alert)
+          alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+          
+          self.present(alertController, animated: true, completion: nil)
+          
+     } else {
+          if (mysharedManager.currentPassage?.arrayOfBlanks.count)! != 0 {
+               let userInputWord = textInputField.text
+               userWords.append(userInputWord!)
+               mysharedManager.currentPassage?.arrayOfBlanks.remove(at: 0)
+               viewWillAppear(true)
+               textInputField.text = ""
+               print(words)
+               print(userWords)
+          }
+     }
+     
     }
     
 }
