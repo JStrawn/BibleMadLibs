@@ -21,7 +21,6 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         
         mysharedManager.playHeavenSound()
-        //mysharedManager.playThunderSound()
 
         mysharedManager.loadDataFromTxtFile()
 

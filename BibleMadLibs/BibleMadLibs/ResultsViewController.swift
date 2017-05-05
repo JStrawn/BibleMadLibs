@@ -70,6 +70,9 @@ class ResultsViewController: UIViewController {
     
     
     @IBAction func shareButton(_ sender: Any) {
+        
+        mysharedManager.playThunderSound()
+        
         // text to share
         let text = finalPassage
         
