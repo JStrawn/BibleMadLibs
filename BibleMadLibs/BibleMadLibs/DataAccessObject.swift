@@ -17,14 +17,13 @@ var audioPlayer3 = AVAudioPlayer()
 class DataAccessObject {
     static let sharedManager = DataAccessObject()
     
-    var typesOfWords = [String]()
-    var passage: String!
+    var currentPassage:Passage?
     
     func downloadPassage(book:String, chapter:Int, lowerVerse:Int, upperVerse:Int, completion:@escaping (_ text:String) -> Void) {
         
         let urlString = "http://labs.bible.org/api/?passage=\(book)%\(chapter):\(lowerVerse)-\(upperVerse)&type=json&formatting=plain"
         
-        print(urlString)
+        //print(urlString)
         
         guard let url = URL(string: urlString)
             else {return}
@@ -71,45 +70,58 @@ class DataAccessObject {
             
             if let jsonData = try? JSONSerialization.jsonObject(with: myData, options: []) as! [String:Any] {
                 
-                self.passage = ""
-                self.passage = jsonData["madlib"] as! String
-                print(self.passage)
+                var blankPassage = ""
+                blankPassage = jsonData["madlib"] as! String
+                //print(blankPassage)
                 
-                //extract the nouns, verbs, and other word types
-
-                let matches = self.matchesForRegexInText(regex: "\\<(.*?)\\>", text: self.passage)
-                print(matches)
-                
-                for match in matches {
-                    let editedMatch = match.replacingOccurrences(of: "<", with: "")
-                    let secondEditedMatch = editedMatch.replacingOccurrences(of: ">", with: "")
-                    let finalEditedMatch = secondEditedMatch.replacingOccurrences(of: "_", with: " ")
-                    
-                    self.typesOfWords.append(finalEditedMatch)
-                }
-                
-                print(self.typesOfWords)
-                
+                completion(blankPassage)
             }
             
         }.resume()
         
     }
     
-    func getBlanks(oldPassage:String, blankPassage:String) {
+    func getBlanks(oldPassage:String, blankPassage:String, completion:@escaping (_ newText:Passage) -> Void) {
+        //extract the nouns, verbs, and other word types
+        var typesOfWords = [String]()
         
+        let matches = self.matchesForRegexInText(regex: "\\<(.*?)\\>", text: blankPassage)
+        print(matches)
+        
+        for match in matches {
+            let editedMatch = match.replacingOccurrences(of: "<", with: "")
+            let secondEditedMatch = editedMatch.replacingOccurrences(of: ">", with: "")
+            let finalEditedMatch = secondEditedMatch.replacingOccurrences(of: "_", with: " ")
+            
+            typesOfWords.append(finalEditedMatch)
+        }
+        
+        print(typesOfWords)
+        
+        let newPassage = Passage(oldString: oldPassage, blankString: blankPassage, blanks: typesOfWords)
+        
+        
+        
+        completion(newPassage)
     }
     
     
-    func getNewPassage() {
+    func getNewPassage(completion:@escaping () -> Void) {
+        
         self.downloadPassage(book: "john", chapter: 203, lowerVerse: 16, upperVerse: 20, completion: { (passage) in
-            //print(passage)
+            
             print("\nMadlib-ifying passage\n")
             self.madlibifyPassage(passage: passage, completion: { (text) in
                 print("\nGetting blanks\n")
-                self.getBlanks(oldPassage: passage, blankPassage: text)
+                self.getBlanks(oldPassage: passage, blankPassage: text, completion: { (newPassage) in
+                    
+                    print("Finished getting new passage")
+                    self.currentPassage = newPassage
+                
+                })
             })
         })
+        
     }
     
     

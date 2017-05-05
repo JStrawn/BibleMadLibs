@@ -28,7 +28,12 @@ class HomeScreenViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        mysharedManager.getNewPassage()
+        mysharedManager.getNewPassage(completion: {
+            print(self.mysharedManager.currentPassage?.oldPassage as Any)
+            
+        })
+        
+        
     }
 
     @IBAction func playButtonWasTapped(_ sender: UIButton) {

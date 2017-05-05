@@ -22,7 +22,7 @@ class ResultsViewController: UIViewController {
         
         animateStone()
         
-        var passage = mysharedManager.passage
+        var passage = mysharedManager.currentPassage?.blankPassage
         
         for word in userWords {
             if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {

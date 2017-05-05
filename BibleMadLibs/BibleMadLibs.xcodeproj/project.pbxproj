@@ -26,6 +26,7 @@
 		C39E00181EBBD9E100F228C4 /* DataAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */; };
 		C39E001B1EBC0F7F00F228C4 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39E00191EBC0F7F00F228C4 /* ResultsViewController.swift */; };
 		C39E001C1EBC0F7F00F228C4 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39E001A1EBC0F7F00F228C4 /* ResultsViewController.xib */; };
+		E86878A41EBCC627003988B2 /* Passage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86878A31EBCC627003988B2 /* Passage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessObject.swift; sourceTree = "<group>"; };
 		C39E00191EBC0F7F00F228C4 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C39E001A1EBC0F7F00F228C4 /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
+		E86878A31EBCC627003988B2 /* Passage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				C38D0B301EBB9D8000283732 /* Main.storyboard */,
 				C38D0B331EBB9D8000283732 /* Assets.xcassets */,
 				C38D0B351EBB9D8000283732 /* LaunchScreen.storyboard */,
+				E86878A31EBCC627003988B2 /* Passage.swift */,
 				840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */,
 				840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */,
 				840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */,
@@ -192,6 +195,7 @@
 				C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */,
 				C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */,
 				840B3C691EBBBE4900E1C9D2 /* HomeScreenViewController.swift in Sources */,
+				E86878A41EBCC627003988B2 /* Passage.swift in Sources */,
 				84914DE21EBC276300D98C20 /* TutorialScreenViewController.swift in Sources */,
 				840B3C6F1EBBDBCC00E1C9D2 /* TextEntryScreen.swift in Sources */,
 				C39E001B1EBC0F7F00F228C4 /* ResultsViewController.swift in Sources */,
