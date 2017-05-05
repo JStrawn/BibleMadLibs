@@ -16,6 +16,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet weak var verseOfTheDayText: UILabel!
     
     let mysharedManager = DataAccessObject.sharedManager
+    var didDownloadNewPassage = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +30,43 @@ class HomeScreenViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        mysharedManager.getNewPassage(completion: {
-            print(self.mysharedManager.currentPassage?.oldPassage as Any)
-            
-        })
+        let status = Reachability.status()
+        if case status = Reachability.unreachable{
+            displayAlert()
+        } else {
+            mysharedManager.getNewPassage(completion: {
+                print(self.mysharedManager.currentPassage?.oldPassage as Any)
+                self.didDownloadNewPassage = true
+            })
+        }
         
         
     }
 
     @IBAction func playButtonWasTapped(_ sender: UIButton) {
+        if !didDownloadNewPassage {
+            let status = Reachability.status()
+            if case status = Reachability.unreachable{
+                displayAlert()
+            } else {
+                mysharedManager.getNewPassage(completion: {
+                    print(self.mysharedManager.currentPassage?.oldPassage as Any)
+                    DispatchQueue.main.async {
+                        let vc = TextEntryScreen()
+                        self.present(vc, animated: true, completion: nil)
+                    }
+                    
+                    
+                })
+            }
+        }
         
-        let vc = TextEntryScreen()
-        self.present(vc, animated: true, completion: nil)
+        
+        if didDownloadNewPassage {
+            let vc = TextEntryScreen()
+            self.present(vc, animated: true, completion: nil)
+        }
+        
         
     }
 
@@ -48,6 +74,14 @@ class HomeScreenViewController: UIViewController {
         let tutVC = TutorialScreenViewController()
         self.present(tutVC, animated: true, completion: nil)
         
+    }
+    
+    func displayAlert() {
+        let alertController = UIAlertController(title: "No Network Detected", message:
+            "Please connect to Wi-Fi and try again.", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }

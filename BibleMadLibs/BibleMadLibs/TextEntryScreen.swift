@@ -29,7 +29,7 @@ class TextEntryScreen: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         if mysharedManager.currentPassage?.arrayOfBlanks.count == 0 {
-          mysharedManager.currentPassage?.arrayOfBlanks.append("test")
+          mysharedManager.currentPassage?.arrayOfBlanks.append("")
           let resultsVC = ResultsViewController()
           resultsVC.userWords = self.userWords
           self.present(resultsVC, animated: true, completion: nil)
@@ -41,8 +41,6 @@ class TextEntryScreen: UIViewController {
         
         
         words = (mysharedManager.currentPassage?.arrayOfBlanks)!
-        
-        //words.append("Test")
         
         if words.count == 1 {
             wordsLeft.text = "Last Word!"

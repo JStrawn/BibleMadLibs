@@ -55,10 +55,7 @@ class ResultsViewController: UIViewController {
     }
     
     @IBAction func backToMenuButtonWasTapped(_ sender: UIButton){
-        //self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-        
-        
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
     
