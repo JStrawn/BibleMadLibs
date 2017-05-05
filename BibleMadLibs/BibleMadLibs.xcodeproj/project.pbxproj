@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5349AE5C1EBBF9DE003BB99E /* ThunderSound.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5349AE591EBBF9C0003BB99E /* ThunderSound.mp4 */; };
+		5349AE5D1EBBF9E2003BB99E /* StoneGrind.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5349AE5A1EBBF9C0003BB99E /* StoneGrind.mp4 */; };
+		5349AE5E1EBBF9E6003BB99E /* HeavenSound.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5349AE5B1EBBF9C0003BB99E /* HeavenSound.mp4 */; };
 		840B3C691EBBBE4900E1C9D2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */; };
 		840B3C6A1EBBBE4900E1C9D2 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */; };
 		840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5349AE591EBBF9C0003BB99E /* ThunderSound.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThunderSound.mp4; sourceTree = "<group>"; };
+		5349AE5A1EBBF9C0003BB99E /* StoneGrind.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoneGrind.mp4; sourceTree = "<group>"; };
+		5349AE5B1EBBF9C0003BB99E /* HeavenSound.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeavenSound.mp4; sourceTree = "<group>"; };
 		840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GelioKleftiko.ttf; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 				C38D0B381EBB9D8000283732 /* Info.plist */,
 				840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */,
 				C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */,
+				5349AE591EBBF9C0003BB99E /* ThunderSound.mp4 */,
+				5349AE5A1EBBF9C0003BB99E /* StoneGrind.mp4 */,
+				5349AE5B1EBBF9C0003BB99E /* HeavenSound.mp4 */,
 			);
 			path = BibleMadLibs;
 			sourceTree = "<group>";
@@ -142,6 +151,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5349AE5E1EBBF9E6003BB99E /* HeavenSound.mp4 in Resources */,
+				5349AE5D1EBBF9E2003BB99E /* StoneGrind.mp4 in Resources */,
+				5349AE5C1EBBF9DE003BB99E /* ThunderSound.mp4 in Resources */,
 				C38D0B371EBB9D8000283732 /* LaunchScreen.storyboard in Resources */,
 				840B3C6A1EBBBE4900E1C9D2 /* HomeScreenViewController.xib in Resources */,
 				840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */,
