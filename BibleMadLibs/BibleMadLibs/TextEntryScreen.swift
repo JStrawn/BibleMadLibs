@@ -32,7 +32,7 @@ class TextEntryScreen: UIViewController {
         textInputField.addTarget(self, action: #selector(textFieldDidChange), for: UIControlEvents.editingChanged)
         
         
-        words = mysharedManager.typesOfWords
+        words = (mysharedManager.currentPassage?.arrayOfBlanks)!
         wordsLeft.text = "\(words.count - 1) left to go!"
 
         wordTypeHint.isHidden = true
@@ -82,14 +82,14 @@ class TextEntryScreen: UIViewController {
     
     @IBAction func nextButtonWasPressed(_ sender: UIButton) {
     
-        if mysharedManager.typesOfWords.count > 1 {
-        let userInputWord = textInputField.text
-        userWords.append(userInputWord!)
-        mysharedManager.typesOfWords.remove(at: 0)
-        viewWillAppear(true)
-        textInputField.text = ""
-        print(words)
-        print(userWords)
+        if (mysharedManager.currentPassage?.arrayOfBlanks.count)! > 1 {
+            let userInputWord = textInputField.text
+            userWords.append(userInputWord!)
+            mysharedManager.currentPassage?.arrayOfBlanks.remove(at: 0)
+            viewWillAppear(true)
+            textInputField.text = ""
+            print(words)
+            print(userWords)
         } else {
             let vc = ResultsViewController()
             vc.userWords = self.userWords
