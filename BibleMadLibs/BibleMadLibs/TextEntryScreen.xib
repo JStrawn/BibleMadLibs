@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GelioKleftiko.ttf">
+            <string>GelioKleftiko</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextEntryScreen" customModule="BibleMadLibs" customModuleProvider="target">
+            <connections>
+                <outlet property="enterABlank" destination="xGf-2r-ZLi" id="8md-2U-BDt"/>
+                <outlet property="nextButton" destination="Ly5-ob-lju" id="Sio-7f-lWN"/>
+                <outlet property="textInputField" destination="GH5-4u-ZLH" id="Ahu-ee-1Yh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wordsLeft" destination="WHg-fB-cZW" id="xHA-fr-6LJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Q3R-OA-JdA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-2r-ZLi">
+                    <rect key="frame" x="0.0" y="46.5" width="375" height="74"/>
+                    <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="72"/>
+                    <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Left to go!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHg-fB-cZW">
+                    <rect key="frame" x="103.5" y="235.5" width="168" height="46.5"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                    <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH5-4u-ZLH">
+                    <rect key="frame" x="94" y="318.5" width="187.5" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-ob-lju">
+                    <rect key="frame" x="299" y="305.5" width="60" height="57"/>
+                    <color key="backgroundColor" red="0.080309486434774133" green="0.087680790925613469" blue="0.39142628205128205" alpha="0.70891702586206895" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.1061331403" blue="0.57746416450000004" alpha="0.67793642239999996" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="WHg-fB-cZW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-75" id="7HG-8d-RFN"/>
+                <constraint firstAttribute="bottom" secondItem="Q3R-OA-JdA" secondAttribute="bottom" id="AEg-mF-81n"/>
+                <constraint firstItem="xGf-2r-ZLi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="B0J-xq-eq9"/>
+                <constraint firstItem="Ly5-ob-lju" firstAttribute="leading" secondItem="GH5-4u-ZLH" secondAttribute="trailing" constant="17.5" id="Bgr-G0-NSm"/>
+                <constraint firstItem="GH5-4u-ZLH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2" id="Es4-RW-bwE"/>
+                <constraint firstItem="Q3R-OA-JdA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MT5-Fc-jby"/>
+                <constraint firstItem="WHg-fB-cZW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RI8-sx-YFr"/>
+                <constraint firstAttribute="trailing" secondItem="Q3R-OA-JdA" secondAttribute="trailing" id="e2R-BD-zH1"/>
+                <constraint firstItem="GH5-4u-ZLH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iMf-k8-OCG"/>
+                <constraint firstAttribute="trailing" secondItem="Ly5-ob-lju" secondAttribute="trailing" constant="16" id="nqX-3f-wbT"/>
+                <constraint firstItem="GH5-4u-ZLH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="peR-65-Am9"/>
+                <constraint firstItem="xGf-2r-ZLi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-250" id="qVh-Qg-fHF"/>
+                <constraint firstItem="Ly5-ob-lju" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="s8q-ae-uJT"/>
+                <constraint firstItem="Q3R-OA-JdA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xew-gZ-Rl4"/>
+                <constraint firstItem="xGf-2r-ZLi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y8O-1P-9TD"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Rock Texture" width="1600" height="1200"/>
+    </resources>
+</document>

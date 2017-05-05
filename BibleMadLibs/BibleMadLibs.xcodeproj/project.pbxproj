@@ -10,6 +10,8 @@
 		840B3C691EBBBE4900E1C9D2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */; };
 		840B3C6A1EBBBE4900E1C9D2 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */; };
 		840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */; };
+		840B3C6F1EBBDBCC00E1C9D2 /* TextEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */; };
+		840B3C701EBBDBCC00E1C9D2 /* TextEntryScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */; };
 		C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */; };
 		C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B2E1EBB9D8000283732 /* ViewController.swift */; };
 		C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B301EBB9D8000283732 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GelioKleftiko.ttf; sourceTree = "<group>"; };
+		840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryScreen.swift; sourceTree = "<group>"; };
+		840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextEntryScreen.xib; sourceTree = "<group>"; };
 		C38D0B291EBB9D8000283732 /* BibleMadLibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleMadLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38D0B2E1EBB9D8000283732 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				C38D0B351EBB9D8000283732 /* LaunchScreen.storyboard */,
 				840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */,
 				840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */,
+				840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */,
+				840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */,
 				C38D0B381EBB9D8000283732 /* Info.plist */,
 				840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */,
 				C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */,
@@ -139,6 +145,7 @@
 				C38D0B371EBB9D8000283732 /* LaunchScreen.storyboard in Resources */,
 				840B3C6A1EBBBE4900E1C9D2 /* HomeScreenViewController.xib in Resources */,
 				840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */,
+				840B3C701EBBDBCC00E1C9D2 /* TextEntryScreen.xib in Resources */,
 				C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */,
 				C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */,
 			);
@@ -155,6 +162,7 @@
 				C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */,
 				C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */,
 				840B3C691EBBBE4900E1C9D2 /* HomeScreenViewController.swift in Sources */,
+				840B3C6F1EBBDBCC00E1C9D2 /* TextEntryScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

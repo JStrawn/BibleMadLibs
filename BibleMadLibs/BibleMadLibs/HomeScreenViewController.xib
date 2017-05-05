@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,6 +29,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="zAR-v9-LDW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".........." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF0-Rh-hXM">
                     <rect key="frame" x="107" y="511" width="162" height="88"/>
                     <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="80"/>
@@ -41,7 +44,7 @@
                     <size key="titleShadowOffset" width="-3" height="3"/>
                     <state key="normal" title="PLAY">
                         <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.052797100559999997" green="0.18772377300000001" blue="0.45641025639999999" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God-Libs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyQ-JQ-hg3">
@@ -49,6 +52,8 @@
                     <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="96"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.052797100559999997" green="0.18772377300000001" blue="0.45641025639999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <size key="shadowOffset" width="-8" height="1"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="White Bird" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-7P-QIu">
                     <rect key="frame" x="273" y="505" width="87" height="87"/>
@@ -68,11 +73,11 @@
                     <size key="titleShadowOffset" width="-3" height="3"/>
                     <state key="normal" title="TUTORIAL">
                         <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.05279710056442511" green="0.18772377299816728" blue="0.45641025641025645" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acts 10:14 But Peter said, “Certainly not, Lord, for I have never eaten anything defiled and ritually unclean!”" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-0M-xFu">
-                    <rect key="frame" x="76" y="245" width="225" height="139"/>
+                    <rect key="frame" x="75" y="244" width="225" height="139"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -83,6 +88,12 @@
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue laurels" translatesAutoresizingMaskIntoConstraints="NO" id="RtJ-dZ-5hJ">
+                    <rect key="frame" x="1" y="176" width="364" height="281"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="RtJ-dZ-5hJ" secondAttribute="height" multiplier="118:91" id="zhv-h1-PDl"/>
+                    </constraints>
+                </imageView>
                 <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laurel-wreath-white-hi" translatesAutoresizingMaskIntoConstraints="NO" id="Fcg-qH-V5X">
                     <rect key="frame" x="5" y="173" width="364" height="281"/>
                     <constraints>
@@ -90,7 +101,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.1061331403" blue="0.57746416450000004" alpha="0.67793642239999996" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1C0-Nz-QCC"/>
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="height" secondItem="1k0-X6-8qu" secondAttribute="height" id="32U-hp-VcF"/>
@@ -99,24 +110,33 @@
                 <constraint firstItem="EbG-lS-CKb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-130" id="9CA-jk-cTJ"/>
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="top" secondItem="1k0-X6-8qu" secondAttribute="bottom" id="B4I-L6-35w"/>
                 <constraint firstAttribute="bottom" secondItem="RF0-Rh-hXM" secondAttribute="bottom" constant="68" id="Bkd-0U-6G0"/>
+                <constraint firstAttribute="trailing" secondItem="zAR-v9-LDW" secondAttribute="trailing" id="C7y-ji-p7c"/>
                 <constraint firstItem="1FK-0M-xFu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="3/5" id="De7-FU-EKw"/>
                 <constraint firstItem="1FK-0M-xFu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="HWi-B8-IJ8"/>
                 <constraint firstAttribute="trailing" secondItem="ONA-7P-QIu" secondAttribute="trailing" constant="15" id="IEd-Aw-td3"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="J25-BI-zZd"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/5" id="LcK-PA-ue5"/>
+                <constraint firstItem="zAR-v9-LDW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="N8r-yI-ox2"/>
                 <constraint firstItem="EbG-lS-CKb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PeY-tp-T33"/>
                 <constraint firstItem="ONA-7P-QIu" firstAttribute="leading" secondItem="1k0-X6-8qu" secondAttribute="trailing" constant="14" id="QCP-Ga-szp"/>
+                <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="height" secondItem="Fcg-qH-V5X" secondAttribute="height" id="Qoj-ao-ubH"/>
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="leading" secondItem="chx-Ck-EW7" secondAttribute="trailing" constant="14" id="VFD-y1-XEe"/>
                 <constraint firstItem="RF0-Rh-hXM" firstAttribute="top" secondItem="iyQ-JQ-hg3" secondAttribute="bottom" constant="377" id="VpB-Rd-nBX"/>
                 <constraint firstAttribute="bottom" secondItem="ONA-7P-QIu" secondAttribute="bottom" constant="75" id="Wd4-iS-bfB"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zvd-NV-CjC"/>
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="width" secondItem="1k0-X6-8qu" secondAttribute="width" multiplier="3" id="cxe-vU-DJN"/>
+                <constraint firstAttribute="bottom" secondItem="zAR-v9-LDW" secondAttribute="bottom" id="eBf-Pm-eed"/>
+                <constraint firstItem="zAR-v9-LDW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eZh-Gi-nDR"/>
+                <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-17" id="eeg-wP-e9f"/>
                 <constraint firstItem="1k0-X6-8qu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="200" id="hzR-Zy-EQD"/>
+                <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-4" id="ih7-22-Ebb"/>
                 <constraint firstItem="Fcg-qH-V5X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mEI-Sf-FKc"/>
+                <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="width" secondItem="RtJ-dZ-5hJ" secondAttribute="height" multiplier="118:91" id="nRi-H8-eYq"/>
                 <constraint firstItem="Fcg-qH-V5X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="oFU-IM-pKY"/>
                 <constraint firstItem="1FK-0M-xFu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oyf-T2-qPi"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ozi-wI-ebe"/>
                 <constraint firstItem="RF0-Rh-hXM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uOi-hv-YBA"/>
+                <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="width" secondItem="Fcg-qH-V5X" secondAttribute="width" id="wWm-uZ-jEu"/>
                 <constraint firstItem="em2-Vz-LtS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xMS-FU-RdT"/>
                 <constraint firstItem="chx-Ck-EW7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="zAB-Ec-R9D"/>
             </constraints>
@@ -124,7 +144,9 @@
         </view>
     </objects>
     <resources>
+        <image name="Rock Texture" width="1600" height="1200"/>
         <image name="White Bird" width="556" height="719"/>
+        <image name="blue laurels" width="480" height="363"/>
         <image name="laurel-wreath-white-hi" width="600" height="454"/>
         <image name="reverse white bird" width="556" height="719"/>
     </resources>
