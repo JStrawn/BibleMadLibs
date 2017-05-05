@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,6 +53,9 @@
                             <state key="normal" title="Classic">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="classicButtonPressed:" destination="-1" eventType="touchUpInside" id="HdQ-sp-G6b"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -60,7 +63,7 @@
                     </constraints>
                 </stackView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="populate this view with the results text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
-                    <rect key="frame" x="0.0" y="14" width="375" height="600"/>
+                    <rect key="frame" x="0.0" y="46.5" width="375" height="534"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -75,7 +78,7 @@
                 <constraint firstAttribute="trailing" secondItem="J6Q-PG-jDP" secondAttribute="trailing" id="NcZ-LP-myO"/>
                 <constraint firstItem="dVR-lw-Tzk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ObO-PD-KZp"/>
                 <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Omc-ha-MWg"/>
-                <constraint firstItem="dVR-lw-Tzk" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="9/10" id="PsB-sC-zal"/>
+                <constraint firstItem="dVR-lw-Tzk" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="8/10" id="PsB-sC-zal"/>
                 <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="dGE-gA-uUp"/>
                 <constraint firstItem="J6Q-PG-jDP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pgv-PS-YHi"/>
                 <constraint firstItem="qot-ce-ExI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="vpW-bU-qVQ"/>

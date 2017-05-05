@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 var audioPlayer1 = AVAudioPlayer()
 var audioPlayer2 = AVAudioPlayer()
@@ -110,6 +111,9 @@ class DataAccessObject {
     
     func getNewPassage(completion:@escaping () -> Void) {
         
+        
+        
+              
         let randInt = generateRandomNum(value: booksArray.count-1)
         //print(randInt)
         
@@ -252,3 +256,5 @@ class DataAccessObject {
     }
     
 }
+
+

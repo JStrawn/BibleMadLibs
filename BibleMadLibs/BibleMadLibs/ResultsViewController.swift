@@ -12,7 +12,8 @@ class ResultsViewController: UIViewController {
     
     @IBOutlet weak var madLibTextLabel: UITextView!
     @IBOutlet weak var stoneImageView: UIImageView!
-    
+    var isClassic = false
+    var finalPassage = String()
     let mysharedManager = DataAccessObject.sharedManager
     
     var userWords = [String]()
@@ -36,7 +37,21 @@ class ResultsViewController: UIViewController {
         editedPassage = editedPassage.replacingOccurrences(of: " :", with: ":")
         
         //madLibTextLabel.isHidden = true
+        finalPassage = editedPassage
         madLibTextLabel.text = editedPassage
+    }
+    
+    @IBAction func classicButtonPressed(_ sender: UIButton){
+        let ogPassage = mysharedManager.currentPassage?.blankPassage
+        
+        if isClassic == true {
+            madLibTextLabel.text = finalPassage
+            isClassic = false
+        }else{
+        
+        madLibTextLabel.text = ogPassage
+            isClassic = true
+        }
     }
     
     @IBAction func backToMenuButtonWasTapped(_ sender: UIButton){
