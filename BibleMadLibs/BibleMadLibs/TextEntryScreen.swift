@@ -32,7 +32,6 @@ class TextEntryScreen: UIViewController {
         textInputField.addTarget(self, action: #selector(textFieldDidChange), for: UIControlEvents.editingChanged)
         
         
-        
         words = mysharedManager.typesOfWords
         wordsLeft.text = "\(words.count - 1) left to go!"
 
@@ -48,9 +47,11 @@ class TextEntryScreen: UIViewController {
             enterABlank.text = "ENTER A"
         }
         
+        
         textInputField.attributedPlaceholder = NSAttributedString(string: word,
                                                                   attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
         
+
     }
     
     func textFieldDidChange() {
@@ -71,6 +72,7 @@ class TextEntryScreen: UIViewController {
         textField.adjustsFontSizeToFitWidth = true
         textField.minimumFontSize = 7.0
         textField.contentScaleFactor = 7.0
+        textField.adjustsFontForContentSizeCategory = true
         
         textField.layer.shadowColor = UIColor.white.cgColor
         textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
