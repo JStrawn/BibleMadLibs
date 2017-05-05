@@ -159,6 +159,8 @@ class DataAccessObject {
                     newPassage.upperVerse = upperVerseNum
                     
                     self.currentPassage = newPassage
+                    
+                    completion()
                 
                 })
             })
@@ -254,6 +256,7 @@ class DataAccessObject {
         
         return randomNum
     }
+    
     
 }
 
