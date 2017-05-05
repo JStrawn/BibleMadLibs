@@ -15,6 +15,7 @@
 		840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */; };
 		840B3C6F1EBBDBCC00E1C9D2 /* TextEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */; };
 		840B3C701EBBDBCC00E1C9D2 /* TextEntryScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */; };
+		84770EDF1EBCD0BB0079BB02 /* DataFile in Resources */ = {isa = PBXBuildFile; fileRef = 84770EDE1EBCD0BB0079BB02 /* DataFile */; };
 		84914DE21EBC276300D98C20 /* TutorialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914DE01EBC276300D98C20 /* TutorialScreenViewController.swift */; };
 		84914DE31EBC276300D98C20 /* TutorialScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84914DE11EBC276300D98C20 /* TutorialScreenViewController.xib */; };
 		C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 		840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GelioKleftiko.ttf; sourceTree = "<group>"; };
 		840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryScreen.swift; sourceTree = "<group>"; };
 		840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextEntryScreen.xib; sourceTree = "<group>"; };
+		84770EDE1EBCD0BB0079BB02 /* DataFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DataFile; path = ../DataFile; sourceTree = "<group>"; };
 		84914DE01EBC276300D98C20 /* TutorialScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialScreenViewController.swift; sourceTree = "<group>"; };
 		84914DE11EBC276300D98C20 /* TutorialScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialScreenViewController.xib; sourceTree = "<group>"; };
 		C38D0B291EBB9D8000283732 /* BibleMadLibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleMadLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 		C38D0B2B1EBB9D8000283732 /* BibleMadLibs */ = {
 			isa = PBXGroup;
 			children = (
+				84770EDE1EBCD0BB0079BB02 /* DataFile */,
 				C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */,
 				C38D0B2E1EBB9D8000283732 /* ViewController.swift */,
 				C38D0B301EBB9D8000283732 /* Main.storyboard */,
@@ -173,6 +176,7 @@
 				C39E001C1EBC0F7F00F228C4 /* ResultsViewController.xib in Resources */,
 				84914DE31EBC276300D98C20 /* TutorialScreenViewController.xib in Resources */,
 				C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */,
+				84770EDF1EBCD0BB0079BB02 /* DataFile in Resources */,
 				C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
