@@ -21,6 +21,8 @@
 		C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B331EBB9D8000283732 /* Assets.xcassets */; };
 		C38D0B371EBB9D8000283732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38D0B351EBB9D8000283732 /* LaunchScreen.storyboard */; };
 		C39E00181EBBD9E100F228C4 /* DataAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */; };
+		C39E001B1EBC0F7F00F228C4 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39E00191EBC0F7F00F228C4 /* ResultsViewController.swift */; };
+		C39E001C1EBC0F7F00F228C4 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39E001A1EBC0F7F00F228C4 /* ResultsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		C38D0B361EBB9D8000283732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C38D0B381EBB9D8000283732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessObject.swift; sourceTree = "<group>"; };
+		C39E00191EBC0F7F00F228C4 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		C39E001A1EBC0F7F00F228C4 /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				C38D0B381EBB9D8000283732 /* Info.plist */,
 				840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */,
 				C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */,
+				C39E00191EBC0F7F00F228C4 /* ResultsViewController.swift */,
+				C39E001A1EBC0F7F00F228C4 /* ResultsViewController.xib */,
 				5349AE591EBBF9C0003BB99E /* ThunderSound.mp4 */,
 				5349AE5A1EBBF9C0003BB99E /* StoneGrind.mp4 */,
 				5349AE5B1EBBF9C0003BB99E /* HeavenSound.mp4 */,
@@ -158,6 +164,7 @@
 				840B3C6A1EBBBE4900E1C9D2 /* HomeScreenViewController.xib in Resources */,
 				840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */,
 				840B3C701EBBDBCC00E1C9D2 /* TextEntryScreen.xib in Resources */,
+				C39E001C1EBC0F7F00F228C4 /* ResultsViewController.xib in Resources */,
 				C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */,
 				C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */,
 			);
@@ -175,6 +182,7 @@
 				C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */,
 				840B3C691EBBBE4900E1C9D2 /* HomeScreenViewController.swift in Sources */,
 				840B3C6F1EBBDBCC00E1C9D2 /* TextEntryScreen.swift in Sources */,
+				C39E001B1EBC0F7F00F228C4 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,7 @@ class DataAccessObject {
     static let sharedManager = DataAccessObject()
     
     var typesOfWords = [String]()
+    var passage: String!
     
     func downloadPassage(book:String, chapter:Int, lowerVerse:Int, upperVerse:Int, completion:@escaping (_ text:String) -> Void) {
         
@@ -70,12 +71,13 @@ class DataAccessObject {
             
             if let jsonData = try? JSONSerialization.jsonObject(with: myData, options: []) as! [String:Any] {
                 
-                let passageString = jsonData["madlib"] as! String
-                print(passageString)
+                self.passage = ""
+                self.passage = jsonData["madlib"] as! String
+                print(self.passage)
                 
                 //extract the nouns, verbs, and other word types
 
-                let matches = self.matchesForRegexInText(regex: "\\<(.*?)\\>", text: passageString)
+                let matches = self.matchesForRegexInText(regex: "\\<(.*?)\\>", text: self.passage)
                 print(matches)
                 
                 for match in matches {

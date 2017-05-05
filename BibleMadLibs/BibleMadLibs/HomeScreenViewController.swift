@@ -27,6 +27,12 @@ class HomeScreenViewController: UIViewController {
 
     }
 
+    @IBAction func playButtonWasTapped(_ sender: UIButton) {
+        
+        let vc = TextEntryScreen()
+        present(vc, animated: true, completion: nil)
+        
+    }
 
     
 
