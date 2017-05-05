@@ -84,6 +84,7 @@ class DataAccessObject {
         
     }
     
+    
     func getBlanks(oldPassage:String, blankPassage:String, completion:@escaping (_ newText:Passage) -> Void) {
         //extract the nouns, verbs, and other word types
         var typesOfWords = [String]()
@@ -110,9 +111,6 @@ class DataAccessObject {
     
     
     func getNewPassage(completion:@escaping () -> Void) {
-        
-        
-        
               
         let randInt = generateRandomNum(value: booksArray.count-1)
         //print(randInt)
@@ -170,8 +168,27 @@ class DataAccessObject {
     }
     
     
-    func checkForWordTypes(passage: String) {
-
+    func getRandomVerse() {
+        
+        let url = URL(string: "http://labs.bible.org/api/?passage=random")!
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            //check if we have any data
+            guard let myData = data
+                else {return}
+            
+            
+            //convert our data to JSON dict
+            guard let json = try? JSONSerialization.jsonObject(with: myData, options: []) as! String
+                else {return}
+            
+            print("####\(json)")
+            
+            DispatchQueue.main.async {}
+            
+            
+            }.resume()
 
     }
     
