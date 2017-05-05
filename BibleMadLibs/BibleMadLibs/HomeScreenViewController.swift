@@ -13,6 +13,8 @@ class HomeScreenViewController: UIViewController {
 
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var verseOfTheDayText: UILabel!
+
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let mysharedManager = DataAccessObject.sharedManager
     var didDownloadNewPassage = false
@@ -37,6 +39,7 @@ class HomeScreenViewController: UIViewController {
                 }
             })
             self.playButton.isEnabled = false
+            self.activityIndicator.startAnimating()
             mysharedManager.getNewPassage(completion: {
                 //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                 self.didDownloadNewPassage = true
@@ -63,6 +66,7 @@ class HomeScreenViewController: UIViewController {
                     //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                     DispatchQueue.main.async {
                         self.playButton.isEnabled = true
+                        self.activityIndicator.stopAnimating()
                         let vc = TextEntryScreen()
                         self.present(vc, animated: true, completion: nil)
                     }

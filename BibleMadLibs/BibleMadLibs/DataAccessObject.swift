@@ -103,7 +103,6 @@ class DataAccessObject {
                 
                 var blankPassage = ""
                 blankPassage = jsonData["madlib"] as! String
-                //print(blankPassage)
                 
                 completion(blankPassage)
             }
@@ -119,6 +118,8 @@ class DataAccessObject {
         
         let matches = self.matchesForRegexInText(regex: "\\<(.*?)\\>", text: blankPassage)
         print(matches)
+
+
         
         for match in matches {
             let editedMatch = match.replacingOccurrences(of: "<", with: "")

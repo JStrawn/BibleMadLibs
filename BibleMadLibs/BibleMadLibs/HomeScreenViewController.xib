@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="BibleMadLibs" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="RYH-0m-Q6K" id="qTh-xn-fYa"/>
                 <outlet property="playButton" destination="1k0-X6-8qu" id="F9t-kM-0WG"/>
                 <outlet property="verseOfTheDayText" destination="1FK-0M-xFu" id="8Mk-lY-KjW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -40,7 +41,7 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-0M-xFu">
                     <rect key="frame" x="19" y="314" width="338" height="0.0"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -74,6 +75,9 @@
                         <action selector="playButtonWasTapped:" destination="-1" eventType="touchUpInside" id="FaZ-yk-FZJ"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-0m-Q6K">
+                    <rect key="frame" x="178" y="401" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
             <constraints>
@@ -88,8 +92,10 @@
                 <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="bottom" secondItem="1k0-X6-8qu" secondAttribute="bottom" constant="50" id="HW9-rW-3wM"/>
                 <constraint firstItem="1FK-0M-xFu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="HWi-B8-IJ8"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="J25-BI-zZd"/>
+                <constraint firstItem="Fcg-qH-V5X" firstAttribute="top" secondItem="RYH-0m-Q6K" secondAttribute="bottom" constant="8" id="JDh-cu-Zka"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/5" id="LcK-PA-ue5"/>
                 <constraint firstItem="zAR-v9-LDW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="N8r-yI-ox2"/>
+                <constraint firstItem="RYH-0m-Q6K" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O1n-I4-Fvp"/>
                 <constraint firstItem="EbG-lS-CKb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PeY-tp-T33"/>
                 <constraint firstItem="Fcg-qH-V5X" firstAttribute="bottom" secondItem="1k0-X6-8qu" secondAttribute="bottom" constant="45" id="YaZ-6u-AF1"/>
                 <constraint firstItem="chx-Ck-EW7" firstAttribute="bottom" secondItem="EbG-lS-CKb" secondAttribute="bottom" constant="15" id="ZdL-oD-rCV"/>
