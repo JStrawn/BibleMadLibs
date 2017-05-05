@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsViewController" customModule="BibleMadLibs" customModuleProvider="target">
             <connections>
                 <outlet property="madLibTextLabel" destination="dVR-lw-Tzk" id="eTo-Kj-tqm"/>
-                <outlet property="stoneImageView" destination="k2W-tV-018" id="2vt-6P-Gv6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,10 +25,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="El9-UF-kMQ">
-                    <rect key="frame" x="3" y="662" width="370" height="0.0"/>
+                    <rect key="frame" x="3" y="612" width="370" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-ce-ExI" userLabel="Back to Menu">
-                            <rect key="frame" x="0.0" y="0.0" width="187" height="0.0"/>
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.18698814655172413" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                             <state key="normal" title="Back to Menu">
@@ -40,7 +39,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm4-q2-U5G" userLabel="Share!">
-                            <rect key="frame" x="192" y="0.0" width="178" height="0.0"/>
+                            <rect key="frame" x="192" y="0.0" width="178" height="50"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                             <state key="normal" title="Share!">
@@ -49,9 +48,6 @@
                         </button>
                     </subviews>
                 </stackView>
-                <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stoneImage" translatesAutoresizingMaskIntoConstraints="NO" id="k2W-tV-018">
-                    <rect key="frame" x="0.0" y="600" width="375" height="662"/>
-                </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="populate this view with the results text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
                     <rect key="frame" x="0.0" y="14" width="375" height="600"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +57,6 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="k2W-tV-018" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Ny-Oe-w5W"/>
                 <constraint firstAttribute="bottom" secondItem="El9-UF-kMQ" secondAttribute="bottom" constant="5" id="6qW-19-aPs"/>
                 <constraint firstItem="J6Q-PG-jDP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="77R-8w-yEF"/>
                 <constraint firstAttribute="bottom" secondItem="J6Q-PG-jDP" secondAttribute="bottom" id="B3b-5S-l3M"/>
@@ -71,9 +66,6 @@
                 <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Omc-ha-MWg"/>
                 <constraint firstItem="dVR-lw-Tzk" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="9/10" id="PsB-sC-zal"/>
                 <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="dGE-gA-uUp"/>
-                <constraint firstItem="El9-UF-kMQ" firstAttribute="top" secondItem="k2W-tV-018" secondAttribute="bottom" constant="-600" id="egI-RG-S7z"/>
-                <constraint firstAttribute="trailing" secondItem="k2W-tV-018" secondAttribute="trailing" id="hGg-C2-dRG"/>
-                <constraint firstItem="k2W-tV-018" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="600" id="ogc-el-AnA"/>
                 <constraint firstItem="J6Q-PG-jDP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pgv-PS-YHi"/>
                 <constraint firstItem="qot-ce-ExI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2" id="vpW-bU-qVQ"/>
                 <constraint firstItem="El9-UF-kMQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yD6-Hd-pI0"/>
@@ -82,6 +74,5 @@
     </objects>
     <resources>
         <image name="Rock Texture" width="1600" height="1200"/>
-        <image name="stoneImage" width="713" height="1200"/>
     </resources>
 </document>
