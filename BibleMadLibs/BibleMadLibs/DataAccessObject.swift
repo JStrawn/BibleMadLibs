@@ -52,7 +52,34 @@ class DataAccessObject {
         }.resume()
     }
     
-    
+    func downloadDailyVerse(completion:@escaping (_ text:String) -> Void) {
+        let randInt = generateRandomNum(value: booksArray.count-1)
+        
+        let bookName:String = booksArray[randInt][0]
+        
+        var chapterNum:Int = generateRandomNum(value: Int(booksArray[randInt][1])!)
+        
+        if chapterNum == 0 {
+            chapterNum = 1
+        }
+        
+        var verseNum = generateRandomNum(value: Int(booksArray[randInt][2])!)
+        
+        if verseNum == 0 {
+            verseNum = 1
+        }
+        
+        let lowerVerseNum:Int = verseNum
+        
+        let upperVerseNum:Int = verseNum
+        
+        self.downloadPassage(book: bookName, chapter: chapterNum, lowerVerse: lowerVerseNum, upperVerse: upperVerseNum, completion: { (passage) in
+            var newPassage = passage
+            newPassage += "\n\((bookName)) \((chapterNum)) \((lowerVerseNum)):\((upperVerseNum))"
+            completion(newPassage)
+            
+        })
+    }
     
     func madlibifyPassage(passage:String, completion:@escaping (_ text:String) -> Void) {
         
@@ -99,7 +126,7 @@ class DataAccessObject {
             typesOfWords.append(finalEditedMatch)
         }
         
-        print(typesOfWords)
+        //print(typesOfWords)
         
         let newPassage = Passage(oldString: oldPassage, blankString: blankPassage, blanks: typesOfWords)
         
@@ -110,15 +137,12 @@ class DataAccessObject {
     
     
     func getNewPassage(completion:@escaping () -> Void) {
-        
-        
-        
-              
+   
         let randInt = generateRandomNum(value: booksArray.count-1)
         //print(randInt)
         
         let bookName:String = booksArray[randInt][0]
-        print(bookName)
+        //print(bookName)
         
         var chapterNum:Int = generateRandomNum(value: Int(booksArray[randInt][1])!)
         
@@ -126,7 +150,7 @@ class DataAccessObject {
             chapterNum = 1
         }
         
-        print("Chatper: \(chapterNum)")
+        //print("Chatper: \(chapterNum)")
         
         var verseNum = generateRandomNum(value: Int(booksArray[randInt][2])!)
         
@@ -138,21 +162,21 @@ class DataAccessObject {
         }
         
         let lowerVerseNum:Int = verseNum - subtractBy
-        print("Lower Verse: \(lowerVerseNum)")
+        //print("Lower Verse: \(lowerVerseNum)")
         
         let upperVerseNum:Int = verseNum
-        print("Upper Verse: \(verseNum)")
+        //print("Upper Verse: \(verseNum)")
         
         self.downloadPassage(book: bookName, chapter: chapterNum, lowerVerse: lowerVerseNum, upperVerse: upperVerseNum, completion: { (passage) in
             
             //print(passage)
             
-            print("\nMadlib-ifying passage\n")
+            //print("\nMadlib-ifying passage\n")
             self.madlibifyPassage(passage: passage, completion: { (text) in
-                print("\nGetting blanks\n")
+                //print("\nGetting blanks\n")
                 self.getBlanks(oldPassage: passage, blankPassage: text, completion: { (newPassage) in
                     
-                    print("Finished getting new passage")
+                    //print("Finished getting new passage")
                     
                     newPassage.bookName = bookName
                     newPassage.chapter = chapterNum

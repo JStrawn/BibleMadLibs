@@ -21,7 +21,7 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //mysharedManager.playHeavenSound()
+        mysharedManager.playHeavenSound()
         //mysharedManager.playStoneGrindSound()
         //mysharedManager.playThunderSound()
 
@@ -34,9 +34,16 @@ class HomeScreenViewController: UIViewController {
         if case status = Reachability.unreachable{
             displayAlert()
         } else {
+            self.mysharedManager.downloadDailyVerse(completion: { (dailyVerse) in
+                DispatchQueue.main.async {
+                    self.verseOfTheDayText.text = dailyVerse
+                }
+            })
+            self.playButton.isEnabled = false
             mysharedManager.getNewPassage(completion: {
-                print(self.mysharedManager.currentPassage?.oldPassage as Any)
+                //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                 self.didDownloadNewPassage = true
+                self.playButton.isEnabled = true
             })
         }
         
@@ -49,9 +56,16 @@ class HomeScreenViewController: UIViewController {
             if case status = Reachability.unreachable{
                 displayAlert()
             } else {
-                mysharedManager.getNewPassage(completion: {
-                    print(self.mysharedManager.currentPassage?.oldPassage as Any)
+                self.mysharedManager.downloadDailyVerse(completion: { (dailyVerse) in
                     DispatchQueue.main.async {
+                        self.verseOfTheDayText.text = dailyVerse
+                    }
+                })
+                self.playButton.isEnabled = false
+                mysharedManager.getNewPassage(completion: {
+                    //print(self.mysharedManager.currentPassage?.oldPassage as Any)
+                    DispatchQueue.main.async {
+                        self.playButton.isEnabled = true
                         let vc = TextEntryScreen()
                         self.present(vc, animated: true, completion: nil)
                     }
