@@ -28,18 +28,37 @@ class TextEntryScreen: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        if mysharedManager.currentPassage?.arrayOfBlanks.count == 0 {
+          
+          self.presentingViewController?.dismiss(animated: true, completion: nil)
+          
+            let vc = ResultsViewController()
+            vc.userWords = self.userWords
+            present(vc, animated: true, completion: nil)
+        }
+        
         setTextFieldBorder(textField: textInputField)
         textInputField.addTarget(self, action: #selector(textFieldDidChange), for: UIControlEvents.editingChanged)
         
         
         words = (mysharedManager.currentPassage?.arrayOfBlanks)!
-        wordsLeft.text = "\(words.count - 1) left to go!"
-
+        
+        //words.append("Test")
+        
+        if words.count == 1 {
+            wordsLeft.text = "Last Word!"
+        } else {
+            wordsLeft.text = "\(words.count - 1) left to go!"
+        }
+        
         wordTypeHint.isHidden = true
         
-        let word = words[0]
-        wordTypeHint.text = "(\(word))"
-
+        var word = ""
+        
+        if words.count != 0 {
+            word = words[0]
+            wordTypeHint.text = "(\(word))"
+        }
         
         if word.hasPrefix("a") {
             enterABlank.text = "ENTER AN"
@@ -48,8 +67,7 @@ class TextEntryScreen: UIViewController {
         }
         
         
-        textInputField.attributedPlaceholder = NSAttributedString(string: word,
-                                                                  attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+        textInputField.attributedPlaceholder = NSAttributedString(string: word,attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
         
 
     }
@@ -82,7 +100,7 @@ class TextEntryScreen: UIViewController {
     
     @IBAction func nextButtonWasPressed(_ sender: UIButton) {
     
-        if (mysharedManager.currentPassage?.arrayOfBlanks.count)! > 1 {
+        if (mysharedManager.currentPassage?.arrayOfBlanks.count)! != 0 {
             let userInputWord = textInputField.text
             userWords.append(userInputWord!)
             mysharedManager.currentPassage?.arrayOfBlanks.remove(at: 0)
@@ -90,10 +108,7 @@ class TextEntryScreen: UIViewController {
             textInputField.text = ""
             print(words)
             print(userWords)
-        } else {
-            let vc = ResultsViewController()
-            vc.userWords = self.userWords
-            present(vc, animated: true, completion: nil)
         }
     }
+    
 }

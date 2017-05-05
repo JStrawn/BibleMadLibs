@@ -36,7 +36,7 @@
 		840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GelioKleftiko.ttf; sourceTree = "<group>"; };
-		840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextEntryScreen.swift; sourceTree = "<group>"; };
+		840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = TextEntryScreen.swift; sourceTree = "<group>"; };
 		840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextEntryScreen.xib; sourceTree = "<group>"; };
 		84770EDE1EBCD0BB0079BB02 /* DataFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DataFile; path = ../DataFile; sourceTree = "<group>"; };
 		84914DE01EBC276300D98C20 /* TutorialScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialScreenViewController.swift; sourceTree = "<group>"; };

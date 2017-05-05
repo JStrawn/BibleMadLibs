@@ -116,16 +116,24 @@ class DataAccessObject {
         let bookName:String = booksArray[randInt][0]
         print(bookName)
         
-        let chapterNum:Int = generateRandomNum(value: Int(booksArray[randInt][1])!)
+        var chapterNum:Int = generateRandomNum(value: Int(booksArray[randInt][1])!)
+        
+        if chapterNum == 0 {
+            chapterNum = 1
+        }
+        
         print("Chatper: \(chapterNum)")
         
         var verseNum = generateRandomNum(value: Int(booksArray[randInt][2])!)
         
+        var subtractBy = 5
+        
         if verseNum < 5 {
             verseNum = 5
+            subtractBy = 4
         }
         
-        let lowerVerseNum:Int = verseNum - 5
+        let lowerVerseNum:Int = verseNum - subtractBy
         print("Lower Verse: \(lowerVerseNum)")
         
         let upperVerseNum:Int = verseNum
@@ -168,8 +176,7 @@ class DataAccessObject {
             let regex = try NSRegularExpression(pattern: regex, options: [])
             let nsString = text as NSString
             
-            let results = regex.matches(in: text,
-                                        options: [], range: NSMakeRange(0, nsString.length))
+            let results = regex.matches(in: text, options: [], range: NSMakeRange(0, nsString.length))
             return results.map { nsString.substring(with: $0.range)}
             
         } catch let error as NSError {
@@ -177,7 +184,8 @@ class DataAccessObject {
             print("invalid regex: \(error.localizedDescription)")
             
             return []
-        }}
+        }
+    }
     
     
     func playHeavenSound(){
@@ -226,6 +234,7 @@ class DataAccessObject {
                 }
                 
                 //print(self.booksArray)
+                self.booksArray.removeLast()
                 
             } catch {
                 print("Failed to read text")
