@@ -40,7 +40,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OzZ-JE-huk" secondAttribute="bottom" id="571-my-TCt"/>
                             <constraint firstItem="OzZ-JE-huk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5aS-Bs-85K"/>

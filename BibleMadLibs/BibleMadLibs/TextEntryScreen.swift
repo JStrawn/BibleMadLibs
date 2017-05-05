@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class TextEntryScreen: UIViewController {
     @IBOutlet weak var wordsLeft: UILabel!
@@ -17,27 +18,23 @@ class TextEntryScreen: UIViewController {
     
     override func viewDidLoad() {
        
-       
-        
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setTextFieldBorder(textField: textInputField)
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setTextFieldBorder(textField: UITextField) {
+        
+        textField.borderStyle = .none
+        textField.layer.backgroundColor = UIColor.white.cgColor
+        
+        textField.layer.masksToBounds = false
+        //textField.layer.shadowColor = UIColor(r: 220, g: 220, b: 220).cgColor
+        textField.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        textField.layer.shadowOpacity = 1.0
+        textField.layer.shadowRadius = 0.0
     }
-    */
 
 }
