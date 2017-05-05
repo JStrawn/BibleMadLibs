@@ -155,6 +155,8 @@ class DataAccessObject {
                     newPassage.upperVerse = upperVerseNum
                     
                     self.currentPassage = newPassage
+                    
+                    completion()
                 
                 })
             })
