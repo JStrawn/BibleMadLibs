@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,22 +40,22 @@
                     <size key="shadowOffset" width="-8" height="1"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FK-0M-xFu">
-                    <rect key="frame" x="19" y="314" width="338" height="0.0"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                    <rect key="frame" x="19" y="333.5" width="338" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse of the Day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-lS-CKb">
-                    <rect key="frame" x="92" y="191" width="192" height="25"/>
+                    <rect key="frame" x="91.5" y="191" width="192" height="25"/>
                     <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="24"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="reverse white bird" translatesAutoresizingMaskIntoConstraints="NO" id="chx-Ck-EW7">
-                    <rect key="frame" x="7" y="164" width="75" height="67"/>
+                    <rect key="frame" x="6.5" y="164" width="75" height="67"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="White Bird" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-7P-QIu">
-                    <rect key="frame" x="294" y="164" width="75" height="67"/>
+                    <rect key="frame" x="293.5" y="164" width="75" height="67"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue laurels" translatesAutoresizingMaskIntoConstraints="NO" id="RtJ-dZ-5hJ">
                     <rect key="frame" x="5" y="434" width="356" height="200"/>
@@ -90,7 +90,7 @@
                 <constraint firstAttribute="trailing" secondItem="zAR-v9-LDW" secondAttribute="trailing" id="C7y-ji-p7c"/>
                 <constraint firstItem="1FK-0M-xFu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="9/10" id="De7-FU-EKw"/>
                 <constraint firstItem="RtJ-dZ-5hJ" firstAttribute="bottom" secondItem="1k0-X6-8qu" secondAttribute="bottom" constant="50" id="HW9-rW-3wM"/>
-                <constraint firstItem="1FK-0M-xFu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="HWi-B8-IJ8"/>
+                <constraint firstItem="1FK-0M-xFu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HWi-B8-IJ8"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="J25-BI-zZd"/>
                 <constraint firstItem="Fcg-qH-V5X" firstAttribute="top" secondItem="RYH-0m-Q6K" secondAttribute="bottom" constant="8" id="JDh-cu-Zka"/>
                 <constraint firstItem="iyQ-JQ-hg3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/5" id="LcK-PA-ue5"/>
