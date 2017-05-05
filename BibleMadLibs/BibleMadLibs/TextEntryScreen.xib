@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -30,7 +31,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Q3R-OA-JdA">
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Q3R-OA-JdA">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-2r-ZLi">
@@ -46,7 +47,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Place" textAlignment="center" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="GH5-4u-ZLH">
-                    <rect key="frame" x="52" y="137" width="271" height="70"/>
+                    <rect key="frame" x="52" y="131" width="271" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="c1m-l0-jVW"/>
                     </constraints>
@@ -54,33 +55,45 @@
                     <fontDescription key="fontDescription" name="GelioKleftiko" family="Gelio Kleftiko" pointSize="30"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-ob-lju">
-                    <rect key="frame" x="300" y="305" width="59" height="57"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
-                    <state key="normal" title="Next">
-                        <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="nextButtonWasPressed:" destination="-1" eventType="touchUpInside" id="hAn-Io-TbN"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryK-aA-zJ5">
-                    <rect key="frame" x="52" y="207" width="271" height="1"/>
+                    <rect key="frame" x="52" y="201" width="271" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ryK-aA-zJ5" secondAttribute="height" multiplier="271:1" id="ZhT-2k-YJI"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(noun)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-Zu-zwk">
-                    <rect key="frame" x="164" y="209" width="47" height="24"/>
+                    <rect key="frame" x="164" y="203" width="47" height="24"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvJ-q0-e08">
-                    <rect key="frame" x="11" y="9" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvJ-q0-e08">
+                    <rect key="frame" x="10" y="10" width="84" height="39"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                    <state key="normal" title="Main Menu">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="mainMenuButtonWasPressed:" destination="-1" eventType="touchUpInside" id="2jd-wX-si5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCv-gO-gYC">
+                    <rect key="frame" x="291" y="351" width="62" height="31"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-ob-lju">
+                    <rect key="frame" x="284" y="300" width="75" height="67"/>
+                    <size key="titleShadowOffset" width="-1" height="1"/>
+                    <state key="normal" image="reverse white bird">
+                        <color key="titleColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.0" green="0.1061331403" blue="0.57746416450000004" alpha="0.67793642239999996" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonWasPressed:" destination="-1" eventType="touchUpInside" id="hAn-Io-TbN"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.67793642239999996" colorSpace="calibratedRGB"/>
@@ -90,25 +103,32 @@
                 <constraint firstItem="WHg-fB-cZW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-75" id="7HG-8d-RFN"/>
                 <constraint firstAttribute="bottom" secondItem="Q3R-OA-JdA" secondAttribute="bottom" id="AEg-mF-81n"/>
                 <constraint firstItem="xGf-2r-ZLi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="B0J-xq-eq9"/>
-                <constraint firstItem="GH5-4u-ZLH" firstAttribute="top" secondItem="xGf-2r-ZLi" secondAttribute="bottom" constant="16" id="KHd-TU-nbg"/>
+                <constraint firstAttribute="trailing" secondItem="MCv-gO-gYC" secondAttribute="trailing" constant="22" id="CnY-H8-wBB"/>
                 <constraint firstItem="Q3R-OA-JdA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MT5-Fc-jby"/>
                 <constraint firstItem="zTK-Zu-zwk" firstAttribute="top" secondItem="GH5-4u-ZLH" secondAttribute="bottom" constant="2" id="OoL-nn-YRx"/>
                 <constraint firstItem="WHg-fB-cZW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RI8-sx-YFr"/>
+                <constraint firstItem="GH5-4u-ZLH" firstAttribute="top" secondItem="xGf-2r-ZLi" secondAttribute="bottom" constant="10" id="XoL-UF-D4B"/>
                 <constraint firstItem="ryK-aA-zJ5" firstAttribute="top" secondItem="GH5-4u-ZLH" secondAttribute="bottom" id="aSd-0g-swt"/>
                 <constraint firstAttribute="trailing" secondItem="Q3R-OA-JdA" secondAttribute="trailing" id="e2R-BD-zH1"/>
+                <constraint firstItem="Ly5-ob-lju" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="2/10" id="gQB-Sd-pa6"/>
+                <constraint firstItem="xGf-2r-ZLi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="47" id="ggt-wQ-g3v"/>
+                <constraint firstItem="Ly5-ob-lju" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/10" id="gu4-0M-F7U"/>
                 <constraint firstAttribute="trailing" secondItem="ryK-aA-zJ5" secondAttribute="trailing" constant="52" id="mR3-yp-FG6"/>
                 <constraint firstAttribute="trailing" secondItem="Ly5-ob-lju" secondAttribute="trailing" constant="16" id="nqX-3f-wbT"/>
-                <constraint firstItem="xGf-2r-ZLi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-250" id="qVh-Qg-fHF"/>
+                <constraint firstItem="MCv-gO-gYC" firstAttribute="bottom" secondItem="Ly5-ob-lju" secondAttribute="bottom" constant="15" id="qu0-4J-xIe"/>
                 <constraint firstItem="Ly5-ob-lju" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="s8q-ae-uJT"/>
+                <constraint firstItem="YvJ-q0-e08" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="wZA-Fu-BJS"/>
                 <constraint firstItem="GH5-4u-ZLH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="x6N-7k-T3L"/>
                 <constraint firstItem="Q3R-OA-JdA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xew-gZ-Rl4"/>
                 <constraint firstItem="xGf-2r-ZLi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y8O-1P-9TD"/>
                 <constraint firstItem="ryK-aA-zJ5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="yTm-9d-Enr"/>
+                <constraint firstItem="YvJ-q0-e08" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="zzl-T5-lA4"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
         <image name="Rock Texture" width="1600" height="1200"/>
+        <image name="reverse white bird" width="556" height="719"/>
     </resources>
 </document>
