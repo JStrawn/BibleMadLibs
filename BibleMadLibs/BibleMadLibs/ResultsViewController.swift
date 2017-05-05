@@ -36,5 +36,9 @@ class ResultsViewController: UIViewController {
         
     }
     
+    @IBAction func backToMenuButtonWasTapped(_ sender: UIButton){
     
+        let vc = HomeScreenViewController()
+        present(vc, animated: true, completion: nil)
+    }
 }

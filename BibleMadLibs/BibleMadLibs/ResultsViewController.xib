@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +19,59 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-PG-jDP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="populate this view with the results text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
+                    <rect key="frame" x="0.0" y="13.5" width="375" height="600"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="El9-UF-kMQ">
+                    <rect key="frame" x="2.5" y="612" width="370" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-ce-ExI" userLabel="Back to Menu">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.18698814655172413" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                            <state key="normal" title="Back to Menu">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backToMenuButtonWasTapped:" destination="-1" eventType="touchUpInside" id="9WU-e8-G6p"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm4-q2-U5G" userLabel="Share!">
+                            <rect key="frame" x="192.5" y="0.0" width="177.5" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                            <state key="normal" title="Share!">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="El9-UF-kMQ" secondAttribute="bottom" constant="5" id="6qW-19-aPs"/>
+                <constraint firstItem="J6Q-PG-jDP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="77R-8w-yEF"/>
+                <constraint firstAttribute="bottom" secondItem="J6Q-PG-jDP" secondAttribute="bottom" id="B3b-5S-l3M"/>
+                <constraint firstItem="El9-UF-kMQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-5" id="JHX-qo-XFt"/>
+                <constraint firstAttribute="trailing" secondItem="J6Q-PG-jDP" secondAttribute="trailing" id="NcZ-LP-myO"/>
+                <constraint firstItem="dVR-lw-Tzk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ObO-PD-KZp"/>
+                <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Omc-ha-MWg"/>
+                <constraint firstItem="dVR-lw-Tzk" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="9/10" id="PsB-sC-zal"/>
+                <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="dGE-gA-uUp"/>
+                <constraint firstItem="J6Q-PG-jDP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pgv-PS-YHi"/>
+                <constraint firstItem="qot-ce-ExI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2" id="vpW-bU-qVQ"/>
+                <constraint firstItem="El9-UF-kMQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yD6-Hd-pI0"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="Rock Texture" width="1600" height="1200"/>
+    </resources>
 </document>

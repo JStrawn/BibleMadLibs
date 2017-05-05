@@ -12,7 +12,7 @@ import UIKit
 class HomeScreenViewController: UIViewController {
 
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var tutorialButton: UIButton!
+//    @IBOutlet weak var tutorialButton: UIButton!
     @IBOutlet weak var verseOfTheDayText: UILabel!
     
     let mysharedManager = DataAccessObject.sharedManager
@@ -34,6 +34,10 @@ class HomeScreenViewController: UIViewController {
         
     }
 
-    
+    @IBAction func tutorialButtonWasTapped(_ sender: UIButton){
+        let tutVC = TutorialScreenViewController()
+        present(tutVC, animated: true, completion: nil)
+        
+    }
 
 }
