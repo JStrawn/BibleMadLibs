@@ -30,11 +30,10 @@ class TextEntryScreen: UIViewController {
         
         if mysharedManager.currentPassage?.arrayOfBlanks.count == 0 {
           
-          self.presentingViewController?.dismiss(animated: true, completion: nil)
+          let resultsVC = ResultsViewController()
+          resultsVC.userWords = self.userWords
+          self.present(resultsVC, animated: true, completion: nil)
           
-            let vc = ResultsViewController()
-            vc.userWords = self.userWords
-            present(vc, animated: true, completion: nil)
         }
         
         setTextFieldBorder(textField: textInputField)

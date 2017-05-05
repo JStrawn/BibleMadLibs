@@ -40,13 +40,13 @@ class HomeScreenViewController: UIViewController {
     @IBAction func playButtonWasTapped(_ sender: UIButton) {
         
         let vc = TextEntryScreen()
-        present(vc, animated: true, completion: nil)
+        self.present(vc, animated: true, completion: nil)
         
     }
 
     @IBAction func tutorialButtonWasTapped(_ sender: UIButton){
         let tutVC = TutorialScreenViewController()
-        present(tutVC, animated: true, completion: nil)
+        self.present(tutVC, animated: true, completion: nil)
         
     }
 
