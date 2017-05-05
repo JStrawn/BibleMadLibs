@@ -45,7 +45,7 @@ class DataAccessObject {
                     passage += text as! String
                     passage += " "
                 }
-                
+                passage = passage.replacingOccurrences(of: "&#8211;", with: "-")
                 completion(passage)
             }
             
@@ -180,10 +180,10 @@ class DataAccessObject {
             
             
             //convert our data to JSON dict
-            guard let json = try? JSONSerialization.jsonObject(with: myData, options: []) as! String
+            guard let json = try? JSONSerialization.jsonObject(with: myData, options: []) as? String
                 else {return}
             
-            print("####\(json)")
+            print("####\(json ?? "Bible Verse")")
             
             DispatchQueue.main.async {}
             

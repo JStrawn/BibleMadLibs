@@ -35,7 +35,7 @@ class HomeScreenViewController: UIViewController {
             displayAlert()
         } else {
             mysharedManager.getNewPassage(completion: {
-                print(self.mysharedManager.currentPassage?.oldPassage as Any)
+                print(self.mysharedManager.currentPassage!.oldPassage as Any)
                 self.didDownloadNewPassage = true
             })
         }
