@@ -15,7 +15,8 @@ class Passage {
     var blankPassage:String
     var arrayOfBlanks = [String]()
     
-    var chapter:String?
+    var bookName:String?
+    var chapter:Int?
     var lowerVerse:Int?
     var upperVerse:Int?
     

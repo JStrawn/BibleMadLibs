@@ -154,7 +154,8 @@ class DataAccessObject {
                     
                     print("Finished getting new passage")
                     
-                    newPassage.chapter = bookName
+                    newPassage.bookName = bookName
+                    newPassage.chapter = chapterNum
                     newPassage.lowerVerse = lowerVerseNum
                     newPassage.upperVerse = upperVerseNum
                     
