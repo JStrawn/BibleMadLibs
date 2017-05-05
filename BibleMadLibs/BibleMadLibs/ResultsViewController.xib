@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-PG-jDP">
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-PG-jDP">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="El9-UF-kMQ">
@@ -65,7 +65,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="populate this view with the results text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
                     <rect key="frame" x="0.0" y="46.5" width="375" height="534"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>

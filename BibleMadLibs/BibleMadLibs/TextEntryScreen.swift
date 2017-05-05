@@ -95,6 +95,10 @@ class TextEntryScreen: UIViewController {
         textField.layer.shadowRadius = 0.0
     }
     
+    @IBAction func mainMenuButtonWasPressed(_ sender: UIButton){
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func nextButtonWasPressed(_ sender: UIButton) {
      
      if textInputField.text == "" {
