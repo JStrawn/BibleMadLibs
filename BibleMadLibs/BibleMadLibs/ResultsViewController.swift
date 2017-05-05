@@ -35,7 +35,7 @@ class ResultsViewController: UIViewController {
         editedPassage = editedPassage.replacingOccurrences(of: " ,", with: ",")
         editedPassage = editedPassage.replacingOccurrences(of: " :", with: ":")
         
-        madLibTextLabel.isHidden = true
+        //madLibTextLabel.isHidden = true
         madLibTextLabel.text = editedPassage
     }
     
@@ -48,17 +48,17 @@ class ResultsViewController: UIViewController {
     
     func animateStone() {
         
-        UIView.animate(withDuration: 2.3, animations: {
-            
-            self.stoneImageView.transform = CGAffineTransform(translationX: 0, y: -600)
-            
-        }) { (finished) in
-            UIView.animate(withDuration: 0.1, animations: {
-                
-                self.madLibTextLabel.isHidden = false
-                
-            })
-        }
+//        UIView.animate(withDuration: 2.3, animations: {
+//            
+//            self.stoneImageView.transform = CGAffineTransform(translationX: 0, y: -600)
+//            
+//        }) { (finished) in
+//            UIView.animate(withDuration: 0.1, animations: {
+//                
+//                self.madLibTextLabel.isHidden = false
+//                
+//            })
+//        }
         
         //moveImageView(imgView: stoneImageView)
         
