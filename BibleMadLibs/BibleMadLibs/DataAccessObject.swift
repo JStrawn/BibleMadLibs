@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import AVFoundation
+
+var audioPlayer1 = AVAudioPlayer()
+var audioPlayer2 = AVAudioPlayer()
+var audioPlayer3 = AVAudioPlayer()
 
 
 class DataAccessObject {
@@ -127,6 +132,39 @@ class DataAccessObject {
             
             return []
         }}
+    
+    
+    func playHeavenSound(){
+        do {
+            audioPlayer1 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource:"HeavenSound", ofType:"mp4")!))
+            audioPlayer1.prepareToPlay()
+        } catch let error as NSError {
+            print(error.description)
+        }
+        audioPlayer1.play()
+    }
+    
+    func playStoneGrindSound(){
+        do {
+            audioPlayer2 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource:"StoneGrind", ofType:"mp4")!))
+            audioPlayer2.prepareToPlay()
+        } catch let error as NSError {
+            print(error.description)
+        }
+        audioPlayer2.play()
+    }
+    
+    func playThunderSound(){
+        do {
+            audioPlayer3 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource:"ThunderSound", ofType:"mp4")!))
+            audioPlayer3.prepareToPlay()
+        } catch let error as NSError {
+            print(error.description)
+        }
+        audioPlayer3.play()
+    }
+    
+
     
     
     
