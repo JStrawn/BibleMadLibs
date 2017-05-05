@@ -10,6 +10,8 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
+    @IBOutlet weak var madLibTextLabel: UITextView!
+    
     let mysharedManager = DataAccessObject.sharedManager
     
     var userWords = [String]()
@@ -32,13 +34,14 @@ class ResultsViewController: UIViewController {
         var editedPassage = passage!.replacingOccurrences(of: " .", with: ".")
         editedPassage = editedPassage.replacingOccurrences(of: " ,", with: ",")
         editedPassage = editedPassage.replacingOccurrences(of: " :", with: ":")
-        print(editedPassage)
-        
+
+        madLibTextLabel.text = editedPassage
     }
     
     @IBAction func backToMenuButtonWasTapped(_ sender: UIButton){
     
-        let vc = HomeScreenViewController()
-        present(vc, animated: true, completion: nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+
+
     }
 }
