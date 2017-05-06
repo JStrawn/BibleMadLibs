@@ -65,13 +65,12 @@ class HomeScreenViewController: UIViewController {
                     }
                 })
                 self.playButton.isEnabled = false
+                
                 mysharedManager.getNewPassage(completion: {
                     //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                     DispatchQueue.main.async {
                         self.playButton.isEnabled = true
-                        DispatchQueue.main.async {
-                            self.activityIndicator.stopAnimating()
-                        }
+                        self.activityIndicator.stopAnimating()
                         let vc = TextEntryScreen()
                         self.present(vc, animated: true, completion: nil)
                     }
