@@ -30,16 +30,18 @@ class HomeScreenViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.activityIndicator.startAnimating()
+        self.playButton.isEnabled = false
         let status = Reachability.status()
         if case status = Reachability.unreachable{
             displayAlert()
+            self.playButton.isEnabled = true
         } else {
             self.mysharedManager.downloadDailyVerse(completion: { (dailyVerse) in
                 DispatchQueue.main.async {
                     self.verseOfTheDayText.text = dailyVerse
                 }
             })
-            self.playButton.isEnabled = false
+            
             mysharedManager.getNewPassage(completion: {
                 //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                 DispatchQueue.main.async {
@@ -59,12 +61,13 @@ class HomeScreenViewController: UIViewController {
             if case status = Reachability.unreachable{
                 displayAlert()
             } else {
+                self.playButton.isEnabled = false
+                
                 self.mysharedManager.downloadDailyVerse(completion: { (dailyVerse) in
                     DispatchQueue.main.async {
                         self.verseOfTheDayText.text = dailyVerse
                     }
                 })
-                self.playButton.isEnabled = false
                 
                 mysharedManager.getNewPassage(completion: {
                     //print(self.mysharedManager.currentPassage?.oldPassage as Any)

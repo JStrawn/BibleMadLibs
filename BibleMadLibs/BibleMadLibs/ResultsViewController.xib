@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -66,7 +66,7 @@
                         <constraint firstItem="nm4-q2-U5G" firstAttribute="width" secondItem="qot-ce-ExI" secondAttribute="width" id="hIW-kX-HTz"/>
                     </constraints>
                 </stackView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="populate this view with the results text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="populate this view with the results text." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
                     <rect key="frame" x="0.0" y="47" width="375" height="534"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="23"/>

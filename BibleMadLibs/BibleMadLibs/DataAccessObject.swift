@@ -129,13 +129,21 @@ class DataAccessObject {
             typesOfWords.append(finalEditedMatch)
         }
         
-        //print(typesOfWords)
+        print("blanks count: \(typesOfWords)\n")
         
-        let newPassage = Passage(oldString: oldPassage, blankString: blankPassage, blanks: typesOfWords)
+        if typesOfWords.count < 10 {
+            self.getNewPassage(completion: {
+                print("Getting New passage\n")
+            })
+        } else {
+            //print(typesOfWords)
+            print("10 blanks found\n")
+            let newPassage = Passage(oldString: oldPassage, blankString: blankPassage, blanks: typesOfWords)
+            
+            completion(newPassage)
+        }
         
         
-        
-        completion(newPassage)
     }
     
     
