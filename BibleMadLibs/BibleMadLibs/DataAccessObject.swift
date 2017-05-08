@@ -45,8 +45,10 @@ class DataAccessObject {
                     passage += text as! String
                     passage += " "
                 }
+                // remove weird encoding for hebrew letters
                 passage = passage.replacingOccurrences(of: "&#8211;", with: "-")
                 passage = passage.replacingOccurrences(of: "&#1495;", with: "חֵ")
+                passage = passage.replacingOccurrences(of: "&#1494;", with: "ז")
                 completion(passage)
             }
             
