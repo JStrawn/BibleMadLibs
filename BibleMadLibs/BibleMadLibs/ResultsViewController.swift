@@ -22,17 +22,26 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mysharedManager.playStoneGrindSound()
-
+        
         
         var passage = mysharedManager.currentPassage?.blankPassage
+        var attributedPassage = NSMutableAttributedString(string: "")
+        
+        
         
         for word in userWords {
-
             
+            print(passage!)
             if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {
                 passage!.replaceSubrange(match, with: word)
                 
+                
+                //in a for loop get from the beginning to the <, minus 1, then append that to the attributed passage with the attributes, then go back and search for your end bracker
+                
             }
+            
+            //GET THE POSITION OF THE FIRST angle bracket. then you know the LENGTH of the word. then you can apply nsattributed texrt to it.
+            
             
         }
         
@@ -44,6 +53,7 @@ class ResultsViewController: UIViewController {
         editedPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
         finalPassage = editedPassage
         madLibTextLabel.text = editedPassage
+        
     }
     
     
@@ -56,7 +66,7 @@ class ResultsViewController: UIViewController {
         }else{
             var ogPassage:String = (mysharedManager.currentPassage?.oldPassage)!
             ogPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
-        madLibTextLabel.text = ogPassage
+            madLibTextLabel.text = ogPassage
             classicButton.setTitle("Mad Libs", for: .normal)
             isClassic = true
         }
@@ -88,5 +98,5 @@ class ResultsViewController: UIViewController {
         self.present(activityViewController, animated: true, completion: nil)
     }
     
-
+    
 }
