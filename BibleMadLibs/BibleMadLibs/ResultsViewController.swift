@@ -25,25 +25,25 @@ class ResultsViewController: UIViewController {
         
         
         var passage = mysharedManager.currentPassage?.blankPassage
-        var attributedPassage = NSMutableAttributedString(string: "")
+        //var attributedPassage = NSMutableAttributedString(string: "")
         
         
-        
-        for word in userWords {
-            
-            print(passage!)
-            if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {
-                passage!.replaceSubrange(match, with: word)
-                
-                
-                //in a for loop get from the beginning to the <, minus 1, then append that to the attributed passage with the attributes, then go back and search for your end bracker
-                
-            }
-            
-            //GET THE POSITION OF THE FIRST angle bracket. then you know the LENGTH of the word. then you can apply nsattributed texrt to it.
-            
-            
-        }
+//        
+//        for word in userWords {
+//            
+//            print(passage!)
+//            if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {
+//                passage!.replaceSubrange(match, with: word)
+//                
+//                
+//                //in a for loop get from the beginning to the <, minus 1, then append that to the attributed passage with the attributes, then go back and search for your end bracker
+//                
+//            }
+//            
+//            //GET THE POSITION OF THE FIRST angle bracket. then you know the LENGTH of the word. then you can apply nsattributed texrt to it.
+//            
+//            
+//        }
         
         //get rid of the api's weird formatting
         var editedPassage = passage!.replacingOccurrences(of: " .", with: ".")

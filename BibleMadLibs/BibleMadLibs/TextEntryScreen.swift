@@ -84,6 +84,7 @@ class TextEntryScreen: UIViewController, UITextFieldDelegate {
      func setTextFieldBorder(textField: UITextField) {
           
           textField.borderStyle = .none
+          
           textField.layer.backgroundColor = UIColor.clear.cgColor
           
           textField.layer.masksToBounds = false
