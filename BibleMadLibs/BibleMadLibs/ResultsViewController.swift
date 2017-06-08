@@ -12,6 +12,7 @@ class ResultsViewController: UIViewController {
     
     @IBOutlet weak var madLibTextLabel: UITextView!
     @IBOutlet weak var classicButton: UIButton!
+    @IBOutlet weak var stone: UIImageView!
     
     var isClassic = false
     var finalPassage = String()
@@ -28,32 +29,70 @@ class ResultsViewController: UIViewController {
         //var attributedPassage = NSMutableAttributedString(string: "")
         
         
-//        
-//        for word in userWords {
-//            
-//            print(passage!)
-//            if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {
-//                passage!.replaceSubrange(match, with: word)
-//                
-//                
-//                //in a for loop get from the beginning to the <, minus 1, then append that to the attributed passage with the attributes, then go back and search for your end bracker
-//                
-//            }
-//            
-//            //GET THE POSITION OF THE FIRST angle bracket. then you know the LENGTH of the word. then you can apply nsattributed texrt to it.
-//            
-//            
-//        }
+        
+        for word in userWords {
+            
+            print(passage!)
+            if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {
+                passage!.replaceSubrange(match, with: word)
+                
+                
+                //in a for loop get from the beginning to the <, minus 1, then append that to the attributed passage with the attributes, then go back and search for your end bracker
+                
+            }
+            
+            //GET THE POSITION OF THE FIRST angle bracket. then you know the LENGTH of the word. then you can apply nsattributed texrt to it.
+            
+            
+        }
         
         //get rid of the api's weird formatting
         var editedPassage = passage!.replacingOccurrences(of: " .", with: ".")
         editedPassage = editedPassage.replacingOccurrences(of: " ,", with: ",")
         editedPassage = editedPassage.replacingOccurrences(of: " :", with: ":")
+        editedPassage = editedPassage.replacingOccurrences(of: " !", with: "!")
         
         editedPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
         finalPassage = editedPassage
         madLibTextLabel.text = editedPassage
         
+
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        madLibTextLabel.isHidden = true
+        self.madLibTextLabel.scrollRangeToVisible(NSMakeRange(0, 0))
+        
+        //Stone tablet animation
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            self.madLibTextLabel.isHidden = false
+            self.madLibTextLabel.fadeIn()
+        })
+        
+        
+        let slideAnimation = CABasicAnimation(keyPath: "position.y")
+        slideAnimation.fromValue = self.view.frame.maxY + stone.frame.height
+        slideAnimation.toValue = self.view.frame.minY + stone.frame.height / 1.8
+        
+        
+        let shakeAnimation = CABasicAnimation(keyPath: "position.x")
+        shakeAnimation.repeatCount = 75
+        shakeAnimation.autoreverses = true
+        shakeAnimation.duration = 0.06
+        shakeAnimation.fromValue = self.view.frame.width/1.8 - 5
+        shakeAnimation.toValue =  self.view.frame.width/1.8 + 5
+        
+        
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.duration = 1.1
+        groupAnimation.animations = [slideAnimation, shakeAnimation]
+        
+        stone.layer.add(groupAnimation, forKey: nil)
+        CATransaction.commit()
+
     }
     
     
@@ -99,4 +138,20 @@ class ResultsViewController: UIViewController {
     }
     
     
+}
+
+
+extension UIView {
+    func fadeIn() {
+        // Move our fade out code from earlier
+        UIView.animate(withDuration: 0.6, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.alpha = 1.0 // Instead of a specific instance of, say, birdTypeLabel, we simply set [thisInstance] (ie, self)'s alpha
+        }, completion: nil)
+    }
+    
+    func fadeOut() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.alpha = 0.0
+        }, completion: nil)
+    }
 }

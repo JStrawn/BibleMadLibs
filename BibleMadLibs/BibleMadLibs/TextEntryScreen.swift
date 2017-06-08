@@ -35,7 +35,7 @@ class TextEntryScreen: UIViewController, UITextFieldDelegate {
                mysharedManager.currentPassage?.arrayOfBlanks.append("")
                let resultsVC = ResultsViewController()
                resultsVC.userWords = self.userWords
-               self.present(resultsVC, animated: true, completion: nil)
+               self.present(resultsVC, animated: false, completion: nil)
                
           }
           
