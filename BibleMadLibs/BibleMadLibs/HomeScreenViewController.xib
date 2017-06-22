@@ -6,26 +6,87 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="BibleMadLibs" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="RYH-0m-Q6K" id="qTh-xn-fYa"/>
+                <outlet property="cloudsImageView" destination="bGU-F5-paJ" id="ynB-97-LRS"/>
+                <outlet property="contentView" destination="ROm-fR-xJd" id="Fv8-5K-fmP"/>
+                <outlet property="playButton" destination="YQz-zg-pL4" id="SoM-Ck-Qlr"/>
                 <outlet property="scrollView" destination="Rdf-U0-id0" id="8Y7-IK-foW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-0m-Q6K">
-                    <rect key="frame" x="178" y="401" width="20" height="20"/>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-0m-Q6K">
+                    <rect key="frame" x="178" y="734" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-U0-id0">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROm-fR-xJd">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="bGU-F5-paJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green-Hill_512x199_2-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Os-Hf-MFj">
+                                    <rect key="frame" x="160" y="2811" width="359" height="270"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="4Os-Hf-MFj" secondAttribute="height" multiplier="359:313" constant="49.319488817891397" id="0s6-Ef-H0Q"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Green-Hill_512x199 copy" translatesAutoresizingMaskIntoConstraints="NO" id="kcU-mM-eav">
+                                    <rect key="frame" x="-104" y="2811" width="398" height="212"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="kcU-mM-eav" secondAttribute="height" multiplier="199:106" id="dW3-hD-Afz"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQz-zg-pL4">
+                                    <rect key="frame" x="75" y="2924" width="226" height="42"/>
+                                    <color key="backgroundColor" red="0.0" green="0.1058823529" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <state key="normal" title="PLAY">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="4Os-Hf-MFj" secondAttribute="trailing" constant="-144" id="5pi-z8-D7b"/>
+                                <constraint firstAttribute="trailing" secondItem="kcU-mM-eav" secondAttribute="trailing" constant="81" id="8fI-eu-NtP"/>
+                                <constraint firstItem="YQz-zg-pL4" firstAttribute="centerX" secondItem="ROm-fR-xJd" secondAttribute="centerX" id="CJC-Av-1Ft"/>
+                                <constraint firstItem="kcU-mM-eav" firstAttribute="leading" secondItem="ROm-fR-xJd" secondAttribute="leading" constant="-104" id="GE2-29-Lfl"/>
+                                <constraint firstItem="4Os-Hf-MFj" firstAttribute="leading" secondItem="ROm-fR-xJd" secondAttribute="leading" constant="160" id="GiY-VY-CYj"/>
+                                <constraint firstAttribute="trailing" secondItem="bGU-F5-paJ" secondAttribute="trailing" id="H9n-xx-0I5"/>
+                                <constraint firstItem="bGU-F5-paJ" firstAttribute="top" secondItem="ROm-fR-xJd" secondAttribute="top" id="M0e-E0-Gcd"/>
+                                <constraint firstAttribute="bottom" secondItem="bGU-F5-paJ" secondAttribute="bottom" id="Pbp-sq-ATw"/>
+                                <constraint firstAttribute="bottom" secondItem="YQz-zg-pL4" secondAttribute="bottom" constant="34" id="dMh-V8-6UM"/>
+                                <constraint firstAttribute="bottom" secondItem="4Os-Hf-MFj" secondAttribute="bottom" constant="-81" id="eNN-bw-gH4"/>
+                                <constraint firstAttribute="bottom" secondItem="kcU-mM-eav" secondAttribute="bottom" constant="-23" id="hbn-kf-uyN"/>
+                                <constraint firstItem="bGU-F5-paJ" firstAttribute="leading" secondItem="ROm-fR-xJd" secondAttribute="leading" id="sQf-0w-Sbv"/>
+                                <constraint firstItem="YQz-zg-pL4" firstAttribute="leading" secondItem="ROm-fR-xJd" secondAttribute="leading" constant="75" id="urh-n0-Jbz"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ROm-fR-xJd" secondAttribute="trailing" id="4wt-ik-RiY"/>
+                        <constraint firstItem="ROm-fR-xJd" firstAttribute="height" secondItem="Rdf-U0-id0" secondAttribute="height" multiplier="3" id="IyL-Sn-e2e"/>
+                        <constraint firstItem="ROm-fR-xJd" firstAttribute="width" secondItem="Rdf-U0-id0" secondAttribute="width" id="XPE-DX-QAQ"/>
+                        <constraint firstAttribute="bottom" secondItem="ROm-fR-xJd" secondAttribute="bottom" id="d21-zn-83I"/>
+                        <constraint firstItem="ROm-fR-xJd" firstAttribute="top" secondItem="Rdf-U0-id0" secondAttribute="top" id="f9y-gv-VkH"/>
+                        <constraint firstItem="ROm-fR-xJd" firstAttribute="leading" secondItem="Rdf-U0-id0" secondAttribute="leading" id="fFZ-a5-iGZ"/>
+                    </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
@@ -33,11 +94,15 @@
                 <constraint firstAttribute="bottom" secondItem="Rdf-U0-id0" secondAttribute="bottom" id="7lt-jg-ESI"/>
                 <constraint firstItem="Rdf-U0-id0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8M2-74-LuG"/>
                 <constraint firstAttribute="trailing" secondItem="Rdf-U0-id0" secondAttribute="trailing" id="GPB-Mm-55i"/>
-                <constraint firstItem="RYH-0m-Q6K" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O1n-I4-Fvp"/>
-                <constraint firstAttribute="bottom" secondItem="RYH-0m-Q6K" secondAttribute="bottom" constant="246" id="brB-YL-onK"/>
                 <constraint firstItem="Rdf-U0-id0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d0X-Z8-WKk"/>
             </constraints>
-            <point key="canvasLocation" x="35.5" y="53.5"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="35.5" y="53"/>
         </view>
     </objects>
+    <resources>
+        <image name="Green-Hill_512x199 copy" width="512" height="199"/>
+        <image name="Green-Hill_512x199_2-1" width="512" height="199"/>
+        <image name="clouds" width="272" height="1088"/>
+    </resources>
 </document>
