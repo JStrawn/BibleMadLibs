@@ -61,7 +61,7 @@ class HomeScreenViewController: UIViewController {
         cloudsImageView.addSubview(verseOfTheDayText)
         verseOfTheDayText.fadeOut()
         
-        
+        activityIndicator.frame = CGRect(x: verseOfTheDayText.frame.midX, y: verseOfTheDayText.frame.midY, width: 20, height: 20)
         
         
         
@@ -91,7 +91,7 @@ class HomeScreenViewController: UIViewController {
         } else {
             self.mysharedManager.downloadDailyVerse(completion: { (dailyVerse) in
                 DispatchQueue.main.async {
-                    self.verseOfTheDayText.text = "Randomly Generated Bible Verse: \n \n \(dailyVerse)"
+                    self.verseOfTheDayText.text = "Randomly Generated Bible Verse: \n \n\(dailyVerse)"
                 }
             })
             
