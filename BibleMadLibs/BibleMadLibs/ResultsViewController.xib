@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +15,7 @@
             <connections>
                 <outlet property="classicButton" destination="Z5O-9A-FH8" id="Ta9-tT-a5y"/>
                 <outlet property="madLibTextLabel" destination="dVR-lw-Tzk" id="eTo-Kj-tqm"/>
+                <outlet property="stone" destination="J6Q-PG-jDP" id="DRE-oW-dqN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,11 +24,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rock Texture" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-PG-jDP">
+                <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tablet" translatesAutoresizingMaskIntoConstraints="NO" id="J6Q-PG-jDP">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="El9-UF-kMQ">
-                    <rect key="frame" x="3" y="612" width="370" height="50"/>
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-ce-ExI" userLabel="Back to Menu">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
@@ -51,7 +53,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5O-9A-FH8">
-                            <rect key="frame" x="260" y="0.0" width="110" height="50"/>
+                            <rect key="frame" x="260" y="0.0" width="115" height="50"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                             <state key="normal" title="Classic">
@@ -66,31 +68,35 @@
                         <constraint firstItem="nm4-q2-U5G" firstAttribute="width" secondItem="qot-ce-ExI" secondAttribute="width" id="hIW-kX-HTz"/>
                     </constraints>
                 </stackView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="populate this view with the results text." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
-                    <rect key="frame" x="0.0" y="47" width="375" height="534"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="populate this view with the results text." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
+                    <rect key="frame" x="30" y="130" width="340" height="481"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dVR-lw-Tzk" secondAttribute="height" multiplier="70:99" id="prm-7A-Tr0"/>
+                    </constraints>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="23"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.10588235294117647" blue="0.57647058823529407" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="El9-UF-kMQ" secondAttribute="bottom" constant="5" id="6qW-19-aPs"/>
+                <constraint firstItem="dVR-lw-Tzk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="5EP-xS-5Zu"/>
+                <constraint firstAttribute="bottom" secondItem="El9-UF-kMQ" secondAttribute="bottom" id="6QR-8l-mgG"/>
                 <constraint firstItem="J6Q-PG-jDP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="77R-8w-yEF"/>
+                <constraint firstItem="dVR-lw-Tzk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="130" id="8ls-Oa-vie"/>
                 <constraint firstAttribute="bottom" secondItem="J6Q-PG-jDP" secondAttribute="bottom" id="B3b-5S-l3M"/>
-                <constraint firstItem="El9-UF-kMQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-5" id="JHX-qo-XFt"/>
+                <constraint firstItem="El9-UF-kMQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FPv-S2-hmh"/>
+                <constraint firstAttribute="trailing" secondItem="El9-UF-kMQ" secondAttribute="trailing" id="IAv-Jj-xbC"/>
                 <constraint firstAttribute="trailing" secondItem="J6Q-PG-jDP" secondAttribute="trailing" id="NcZ-LP-myO"/>
-                <constraint firstItem="dVR-lw-Tzk" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ObO-PD-KZp"/>
-                <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Omc-ha-MWg"/>
-                <constraint firstItem="dVR-lw-Tzk" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="8/10" id="PsB-sC-zal"/>
-                <constraint firstItem="dVR-lw-Tzk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="dGE-gA-uUp"/>
+                <constraint firstAttribute="trailing" secondItem="dVR-lw-Tzk" secondAttribute="trailing" constant="5" id="OPy-pO-A8Q"/>
                 <constraint firstItem="J6Q-PG-jDP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pgv-PS-YHi"/>
                 <constraint firstItem="qot-ce-ExI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="vpW-bU-qVQ"/>
-                <constraint firstItem="El9-UF-kMQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yD6-Hd-pI0"/>
+                <constraint firstItem="El9-UF-kMQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yPD-xw-CKk"/>
             </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Rock Texture" width="1600" height="1200"/>
+        <image name="tablet" width="1491" height="2400"/>
     </resources>
 </document>
