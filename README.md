@@ -4,8 +4,8 @@ Bible Ad-Libs, or "God-Libs," is a work-in-progress Madlibs-style game that pull
 # Screenshots
 <div align="center">
 
-<img src ="https://github.com/JStrawn/ApprovalRating/blob/master/Docs/img/godlibs.gif" height="733" width="437">  
+<img src ="https://github.com/JStrawn/BibleMadLibs/blob/master/img/godlibs.gif" height="733" width="437">  
 
-<img src="https://github.com/JStrawn/ApprovalRating/blob/master/Docs/img/godlibs.gif" height="733" width="437">  
+<img src="https://github.com/JStrawn/BibleMadLibs/blob/master/img/godlibs2.gif" height="733" width="437">  
 
 </div>
