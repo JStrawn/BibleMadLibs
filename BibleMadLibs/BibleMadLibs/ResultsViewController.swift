@@ -56,6 +56,8 @@ class ResultsViewController: UIViewController {
         finalPassage = editedPassage
         madLibTextLabel.text = editedPassage
         
+        mysharedManager.currentPassage?.editedPassage = editedPassage
+        
 
     }
     

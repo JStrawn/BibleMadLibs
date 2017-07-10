@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 import UIKit
+import CoreData
 
 var audioPlayer1 = AVAudioPlayer()
 var audioPlayer2 = AVAudioPlayer()
@@ -18,9 +19,13 @@ var audioPlayer3 = AVAudioPlayer()
 class DataAccessObject {
     static let sharedManager = DataAccessObject()
     
+    var context: NSManagedObjectContext
+    
     var currentPassage:Passage?
     
     var booksArray = [[String]]()
+    
+    var passageArray = [SavedPassage]()
     
     func downloadPassage(book:String, chapter:Int, lowerVerse:Int, upperVerse:Int, completion:@escaping (_ text:String) -> Void) {
         
@@ -54,6 +59,37 @@ class DataAccessObject {
             
         }.resume()
     }
+    
+    init() {
+        // This resource is the same name as your xcdatamodeld contained in your project.
+        guard let modelURL = Bundle.main.url(forResource: "GodLibsDataModel", withExtension:"momd") else {
+            fatalError("Error loading model from bundle")
+        }
+        // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
+        guard let mom = NSManagedObjectModel(contentsOf: modelURL) else {
+            fatalError("Error initializing mom from: \(modelURL)")
+        }
+        let psc = NSPersistentStoreCoordinator(managedObjectModel: mom)
+        context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.persistentStoreCoordinator = psc
+        DispatchQueue.global(qos: .userInitiated).async  {
+            let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            let docURL = urls[urls.endIndex-1]
+            /* The directory the application uses to store the Core Data store file.
+             This code uses a file named "DataModel.sqlite" in the application's documents directory.
+             */
+            let storeURL = docURL.appendingPathComponent("DataModel.sqlite")
+            do {
+                try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+            } catch {
+                fatalError("Error migrating store: \(error)")
+            }
+        }
+        
+    }
+    
+    
+
     
     func downloadDailyVerse(completion:@escaping (_ text:String) -> Void) {
         let randInt = generateRandomNum(value: booksArray.count-1)
@@ -257,6 +293,39 @@ class DataAccessObject {
     }
     
 
+    func savePassage(){
+        
+        
+ 
+        let passageToSave = NSEntityDescription.insertNewObject(forEntityName: "SavedPassage", into: context) as! SavedPassage
+        passageToSave.editedPassage = currentPassage?.editedPassage
+        passageToSave.oldPassage = currentPassage?.oldPassage
+        
+        saveData()
+        
+    }
+    
+        func saveData() {
+            do {
+                try context.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+        }
+    
+    
+        func loadData() {
+            let moc = context
+            let loadPassage = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedPassage")
+    
+            do {
+                let fetchPassage = try moc.fetch(loadPassage) as! [SavedPassage]
+                passageArray = fetchPassage
+            } catch {
+                fatalError("Failed to fetch \(error)")
+            }
+        }
+    
     func loadDataFromTxtFile() {
         let filename = "DataFile"
         
