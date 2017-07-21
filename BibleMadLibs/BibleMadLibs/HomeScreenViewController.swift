@@ -13,7 +13,6 @@ class HomeScreenViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var cloudsImageView: UIImageView!
     
@@ -61,8 +60,6 @@ class HomeScreenViewController: UIViewController {
         cloudsImageView.addSubview(verseOfTheDayText)
         verseOfTheDayText.fadeOut()
         
-        activityIndicator.frame = CGRect(x: verseOfTheDayText.frame.midX, y: verseOfTheDayText.frame.midY, width: 20, height: 20)
-        
         
         
         
@@ -81,7 +78,6 @@ class HomeScreenViewController: UIViewController {
             
         }
         
-        self.activityIndicator.startAnimating()
         self.playButton.layer.cornerRadius = 15
         self.playButton.isEnabled = false
         let status = Reachability.status()
@@ -97,9 +93,6 @@ class HomeScreenViewController: UIViewController {
             
             mysharedManager.getNewPassage(completion: {
                 //print(self.mysharedManager.currentPassage?.oldPassage as Any)
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                }
                 self.didDownloadNewPassage = true
                 self.playButton.isEnabled = true
             })
@@ -126,7 +119,6 @@ class HomeScreenViewController: UIViewController {
                     //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                     DispatchQueue.main.async {
                         self.playButton.isEnabled = true
-                        self.activityIndicator.stopAnimating()
                         let vc = TextEntryScreen()
                         self.present(vc, animated: true, completion: nil)
                     }

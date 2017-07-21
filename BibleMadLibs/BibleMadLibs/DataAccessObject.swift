@@ -170,8 +170,16 @@ class DataAccessObject {
         print("blanks count: \(typesOfWords)\n")
         
         if typesOfWords.count < 10 {
+            print("Getting New passage\n")
             self.getNewPassage(completion: {
-                print("Getting New passage\n")
+                print("Finished Getting New passage\n")
+                let newPassage = Passage(oldString: oldPassage, blankString: blankPassage, blanks: typesOfWords)
+                
+                DispatchQueue.main.async {
+                    print("Dispatching to main que!")
+                    completion(newPassage)
+                }
+                
             })
         } else {
             //print(typesOfWords)
