@@ -293,19 +293,20 @@ class DataAccessObject {
     }
     
 
-    func savePassage(){
+    func savePassage(name:String){
         
         
  
         let passageToSave = NSEntityDescription.insertNewObject(forEntityName: "SavedPassage", into: context) as! SavedPassage
         passageToSave.editedPassage = currentPassage?.editedPassage
         passageToSave.oldPassage = currentPassage?.oldPassage
+        passageToSave.title = name
         
         saveData()
         
     }
     
-        func saveData() {
+    func saveData() {
             do {
                 try context.save()
             } catch {
@@ -325,6 +326,13 @@ class DataAccessObject {
                 fatalError("Failed to fetch \(error)")
             }
         }
+    
+    func deleteFromCoreData(row: Int){
+        context.delete(passageArray[row])
+        self.passageArray.remove(at: row)
+        saveData()
+    }
+    
     
     func loadDataFromTxtFile() {
         let filename = "DataFile"

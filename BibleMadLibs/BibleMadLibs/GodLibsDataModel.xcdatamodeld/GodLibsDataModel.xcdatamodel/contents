@@ -3,8 +3,9 @@
     <entity name="SavedPassage" representedClassName="SavedPassage" syncable="YES" codeGenerationType="class">
         <attribute name="editedPassage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="oldPassage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SavedPassage" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="SavedPassage" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

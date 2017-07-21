@@ -15,10 +15,10 @@
 		840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */; };
 		840B3C6F1EBBDBCC00E1C9D2 /* TextEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */; };
 		840B3C701EBBDBCC00E1C9D2 /* TextEntryScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */; };
+		843D50441F1E835C0047794D /* LoadTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D50421F1E835C0047794D /* LoadTableVC.swift */; };
+		843D50451F1E835C0047794D /* LoadTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843D50431F1E835C0047794D /* LoadTableVC.xib */; };
 		84770EDF1EBCD0BB0079BB02 /* DataFile in Resources */ = {isa = PBXBuildFile; fileRef = 84770EDE1EBCD0BB0079BB02 /* DataFile */; };
 		84BADE571EBCFA8200A41F9D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BADE561EBCFA8200A41F9D /* Reachability.swift */; };
-		84C6ADE21F06E271001C546B /* LoadScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6ADE01F06E271001C546B /* LoadScreenViewController.swift */; };
-		84C6ADE31F06E271001C546B /* LoadScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C6ADE11F06E271001C546B /* LoadScreenViewController.xib */; };
 		84C6ADE61F06EBE7001C546B /* GodLibsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84C6ADE41F06EBE7001C546B /* GodLibsDataModel.xcdatamodeld */; };
 		C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */; };
 		C38D0B2F1EBB9D8000283732 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D0B2E1EBB9D8000283732 /* ViewController.swift */; };
@@ -40,10 +40,10 @@
 		840B3C6B1EBBC44B00E1C9D2 /* GelioKleftiko.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GelioKleftiko.ttf; sourceTree = "<group>"; };
 		840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = TextEntryScreen.swift; sourceTree = "<group>"; };
 		840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextEntryScreen.xib; sourceTree = "<group>"; };
+		843D50421F1E835C0047794D /* LoadTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadTableVC.swift; path = ../LoadTableVC.swift; sourceTree = "<group>"; };
+		843D50431F1E835C0047794D /* LoadTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadTableVC.xib; path = ../LoadTableVC.xib; sourceTree = "<group>"; };
 		84770EDE1EBCD0BB0079BB02 /* DataFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DataFile; path = ../DataFile; sourceTree = "<group>"; };
 		84BADE561EBCFA8200A41F9D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		84C6ADE01F06E271001C546B /* LoadScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadScreenViewController.swift; sourceTree = "<group>"; };
-		84C6ADE11F06E271001C546B /* LoadScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadScreenViewController.xib; sourceTree = "<group>"; };
 		84C6ADE51F06EBE7001C546B /* GodLibsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GodLibsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C38D0B291EBB9D8000283732 /* BibleMadLibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleMadLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,12 +94,12 @@
 				C38D0B2C1EBB9D8000283732 /* AppDelegate.swift */,
 				C38D0B2E1EBB9D8000283732 /* ViewController.swift */,
 				C39E00171EBBD9E100F228C4 /* DataAccessObject.swift */,
-				84C6ADE01F06E271001C546B /* LoadScreenViewController.swift */,
-				84C6ADE11F06E271001C546B /* LoadScreenViewController.xib */,
 				E86878A31EBCC627003988B2 /* Passage.swift */,
 				C38D0B301EBB9D8000283732 /* Main.storyboard */,
 				840B3C671EBBBE4900E1C9D2 /* HomeScreenViewController.swift */,
 				840B3C681EBBBE4900E1C9D2 /* HomeScreenViewController.xib */,
+				843D50421F1E835C0047794D /* LoadTableVC.swift */,
+				843D50431F1E835C0047794D /* LoadTableVC.xib */,
 				840B3C6D1EBBDBCC00E1C9D2 /* TextEntryScreen.swift */,
 				840B3C6E1EBBDBCC00E1C9D2 /* TextEntryScreen.xib */,
 				C39E00191EBC0F7F00F228C4 /* ResultsViewController.swift */,
@@ -180,10 +180,10 @@
 				5349AE5C1EBBF9DE003BB99E /* ThunderSound.mp4 in Resources */,
 				C38D0B371EBB9D8000283732 /* LaunchScreen.storyboard in Resources */,
 				840B3C6A1EBBBE4900E1C9D2 /* HomeScreenViewController.xib in Resources */,
+				843D50451F1E835C0047794D /* LoadTableVC.xib in Resources */,
 				840B3C6C1EBBC8BA00E1C9D2 /* GelioKleftiko.ttf in Resources */,
 				840B3C701EBBDBCC00E1C9D2 /* TextEntryScreen.xib in Resources */,
 				C39E001C1EBC0F7F00F228C4 /* ResultsViewController.xib in Resources */,
-				84C6ADE31F06E271001C546B /* LoadScreenViewController.xib in Resources */,
 				C38D0B341EBB9D8000283732 /* Assets.xcassets in Resources */,
 				84770EDF1EBCD0BB0079BB02 /* DataFile in Resources */,
 				C38D0B321EBB9D8000283732 /* Main.storyboard in Resources */,
@@ -202,9 +202,9 @@
 				C38D0B2D1EBB9D8000283732 /* AppDelegate.swift in Sources */,
 				840B3C691EBBBE4900E1C9D2 /* HomeScreenViewController.swift in Sources */,
 				E86878A41EBCC627003988B2 /* Passage.swift in Sources */,
+				843D50441F1E835C0047794D /* LoadTableVC.swift in Sources */,
 				84BADE571EBCFA8200A41F9D /* Reachability.swift in Sources */,
 				840B3C6F1EBBDBCC00E1C9D2 /* TextEntryScreen.swift in Sources */,
-				84C6ADE21F06E271001C546B /* LoadScreenViewController.swift in Sources */,
 				84C6ADE61F06EBE7001C546B /* GodLibsDataModel.xcdatamodeld in Sources */,
 				C39E001B1EBC0F7F00F228C4 /* ResultsViewController.swift in Sources */,
 			);

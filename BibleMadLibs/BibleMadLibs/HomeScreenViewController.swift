@@ -13,18 +13,25 @@ class HomeScreenViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+//    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var verseOfTheDayText: UITextView!
+    @IBOutlet weak var godLibsTitle: UILabel!
     @IBOutlet weak var cloudsImageView: UIImageView!
     
-    var verseOfTheDayText : UITextView!
-    var godlibsTitle : UITextView!
+//    var verseOfTheDayText : UITextView!
+//    var godlibsTitle : UITextView!
     
     let mysharedManager = DataAccessObject.sharedManager
     var didDownloadNewPassage = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        godLibsTitle.alpha = 0
+        playButton.alpha = 0
+        loadButton.alpha = 0
+        verseOfTheDayText.alpha = 0
         mysharedManager.playHeavenSound()
         mysharedManager.loadDataFromTxtFile()
         
@@ -37,31 +44,31 @@ class HomeScreenViewController: UIViewController {
         
         //        let labelSize = CGSize(width: view.frame.width, height: view.frame.height/6.0)
         //        let labelFrame = CGRect(x:view.frame.midX - (labelSize.width/2) , y: self.view.frame.midY - (labelSize.height/2), width: labelSize.width, height: labelSize.height)
-        godlibsTitle = UITextView(frame: CGRect(x:cloudsImageView.frame.midX - (cloudsImageView.frame.width/2), y:contentView.bounds.midY/1.1, width: cloudsImageView.frame.width, height: self.view.frame.height/10))
-        //        godlibsTitle = UITextView(frame: labelFrame)
+//        godlibsTitle = UITextView(frame: CGRect(x:cloudsImageView.frame.midX - (cloudsImageView.frame.width/2), y:contentView.bounds.midY/1.1, width: cloudsImageView.frame.width, height: self.view.frame.height/10))
+//                godlibsTitle = UITextView(frame: labelFrame)
         
         
         
-        godlibsTitle.text = "GOD-LIBS"
-        godlibsTitle.backgroundColor = UIColor.clear
-        godlibsTitle.textContainerInset = UIEdgeInsetsMake(0,0,0,0)
-        godlibsTitle.textColor = UIColor.white
-        godlibsTitle.font = UIFont(name: "GelioKleftiko", size: 80)
-        godlibsTitle.textAlignment = .center
-        godlibsTitle.isUserInteractionEnabled = false
-        cloudsImageView.addSubview(godlibsTitle)
-        godlibsTitle.fadeOut()
+//        godlibsTitle.text = "GOD-LIBS"
+//        godlibsTitle.backgroundColor = UIColor.clear
+//        godlibsTitle.textContainerInset = UIEdgeInsetsMake(0,0,0,0)
+//        godlibsTitle.textColor = UIColor.white
+//        godlibsTitle.font = UIFont(name: "GelioKleftiko", size: 80)
+//        godlibsTitle.textAlignment = .center
+//        godlibsTitle.isUserInteractionEnabled = false
+//        cloudsImageView.addSubview(godlibsTitle)
+//        godlibsTitle.fadeOut()
         
-        verseOfTheDayText = UITextView(frame: CGRect(x:cloudsImageView.frame.midX - (cloudsImageView.frame.width * 0.40), y:contentView.bounds.midY, width: cloudsImageView.frame.width * 0.80, height: self.view.frame.height/4))
-        verseOfTheDayText.backgroundColor = UIColor.black
-        verseOfTheDayText.textColor = UIColor.white
-        verseOfTheDayText.isUserInteractionEnabled = false
-        verseOfTheDayText.layer.cornerRadius = 15
-        verseOfTheDayText.font = UIFont.systemFont(ofSize: 18)
-        cloudsImageView.addSubview(verseOfTheDayText)
-        verseOfTheDayText.fadeOut()
+//        verseOfTheDayText = UITextView(frame: CGRect(x:cloudsImageView.frame.midX - (cloudsImageView.frame.width * 0.40), y:contentView.bounds.midY, width: cloudsImageView.frame.width * 0.80, height: self.view.frame.height/4))
+//        verseOfTheDayText.backgroundColor = UIColor.black
+//        verseOfTheDayText.textColor = UIColor.white
+//        verseOfTheDayText.isUserInteractionEnabled = false
+//        verseOfTheDayText.layer.cornerRadius = 15
+//        verseOfTheDayText.font = UIFont.systemFont(ofSize: 18)
+//        cloudsImageView.addSubview(verseOfTheDayText)
+//        verseOfTheDayText.fadeOut()
         
-        activityIndicator.frame = CGRect(x: verseOfTheDayText.frame.midX, y: verseOfTheDayText.frame.midY, width: 20, height: 20)
+//        activityIndicator.frame = CGRect(x: verseOfTheDayText.frame.midX, y: verseOfTheDayText.frame.midY, width: 20, height: 20)
         
         
         
@@ -74,15 +81,23 @@ class HomeScreenViewController: UIViewController {
             UIView.animate(withDuration: 1.8, delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {
                 self.scrollView.contentOffset.y = CGFloat(self.view.frame.height * 3 - self.view.frame.height)
             }, completion: { complete in
-                self.godlibsTitle.fadeIn()
+                
+                
+                self.godLibsTitle.fadeIn()
+                self.playButton.fadeIn()
+                self.loadButton.fadeIn()
                 self.verseOfTheDayText.fadeIn()
-                self.verseOfTheDayText.alpha = 0.50
+//                self.verseOfTheDayText.fadeIn()
+//                self.verseOfTheDayText.alpha = 0.50
             })
             
-        }
+            }
         
-        self.activityIndicator.startAnimating()
+        
+//        self.activityIndicator.startAnimating() 
+        self.verseOfTheDayText.layer.cornerRadius = 15
         self.playButton.layer.cornerRadius = 15
+        self.loadButton.layer.cornerRadius = 15
         self.playButton.isEnabled = false
         let status = Reachability.status()
         if case status = Reachability.unreachable{
@@ -94,11 +109,11 @@ class HomeScreenViewController: UIViewController {
                     self.verseOfTheDayText.text = "Randomly Generated Bible Verse: \n \n\(dailyVerse)"
                 }
             })
-            
+        
             mysharedManager.getNewPassage(completion: {
                 //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                 DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
+//                    self.activityIndicator.stopAnimating()
                 }
                 self.didDownloadNewPassage = true
                 self.playButton.isEnabled = true
@@ -126,7 +141,7 @@ class HomeScreenViewController: UIViewController {
                     //print(self.mysharedManager.currentPassage?.oldPassage as Any)
                     DispatchQueue.main.async {
                         self.playButton.isEnabled = true
-                        self.activityIndicator.stopAnimating()
+//                        self.activityIndicator.stopAnimating()
                         let vc = TextEntryScreen()
                         self.present(vc, animated: true, completion: nil)
                     }
@@ -154,6 +169,12 @@ class HomeScreenViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func loadButtonPressed(_ sender: Any) {
+        
+        let loadTableView = LoadTableVC()
+        
+        self.present(loadTableView, animated: true, completion: nil)
+    }
 }
 
 

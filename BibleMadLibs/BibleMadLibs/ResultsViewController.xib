@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="classicButton" destination="Z5O-9A-FH8" id="Ta9-tT-a5y"/>
                 <outlet property="madLibTextLabel" destination="dVR-lw-Tzk" id="eTo-Kj-tqm"/>
+                <outlet property="saveButton" destination="v5r-le-eMe" id="Kpc-bZ-Odt"/>
                 <outlet property="stone" destination="J6Q-PG-jDP" id="DRE-oW-dqN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,19 +31,19 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="El9-UF-kMQ">
                     <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-ce-ExI" userLabel="Back to Menu">
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5r-le-eMe" userLabel="Save?">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.18698814655172413" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                            <state key="normal" title="Main Menu">
+                            <state key="normal" title="Save?">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="backToMenuButtonWasTapped:" destination="-1" eventType="touchUpInside" id="9WU-e8-G6p"/>
+                                <action selector="saveButtonPressed:" destination="-1" eventType="primaryActionTriggered" id="94Q-v0-ama"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm4-q2-U5G" userLabel="Share!">
-                            <rect key="frame" x="130" y="0.0" width="125" height="50"/>
+                            <rect key="frame" x="130" y="0.0" width="115" height="50"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                             <state key="normal" title="Share!">
@@ -53,7 +54,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5O-9A-FH8">
-                            <rect key="frame" x="260" y="0.0" width="115" height="50"/>
+                            <rect key="frame" x="250" y="0.0" width="125" height="50"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                             <state key="normal" title="Classic">
@@ -65,7 +66,8 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="nm4-q2-U5G" firstAttribute="width" secondItem="qot-ce-ExI" secondAttribute="width" id="hIW-kX-HTz"/>
+                        <constraint firstItem="v5r-le-eMe" firstAttribute="width" secondItem="El9-UF-kMQ" secondAttribute="width" multiplier="1/3" id="WHR-xT-DBh"/>
+                        <constraint firstItem="Z5O-9A-FH8" firstAttribute="width" secondItem="v5r-le-eMe" secondAttribute="width" id="lh3-Gu-o7O"/>
                     </constraints>
                 </stackView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="populate this view with the results text." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-lw-Tzk">
@@ -77,6 +79,17 @@
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-ce-ExI" userLabel="Back to Menu">
+                    <rect key="frame" x="0.0" y="0.0" width="118" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.18698814655172413" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                    <state key="normal" title="Main Menu">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backToMenuButtonWasTapped:" destination="-1" eventType="touchUpInside" id="9WU-e8-G6p"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="0.68000000000000005" colorSpace="calibratedRGB"/>
             <constraints>
@@ -89,14 +102,15 @@
                 <constraint firstAttribute="trailing" secondItem="El9-UF-kMQ" secondAttribute="trailing" id="IAv-Jj-xbC"/>
                 <constraint firstAttribute="trailing" secondItem="J6Q-PG-jDP" secondAttribute="trailing" id="NcZ-LP-myO"/>
                 <constraint firstAttribute="trailing" secondItem="dVR-lw-Tzk" secondAttribute="trailing" constant="5" id="OPy-pO-A8Q"/>
+                <constraint firstItem="qot-ce-ExI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pfh-AA-vjC"/>
                 <constraint firstItem="J6Q-PG-jDP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pgv-PS-YHi"/>
-                <constraint firstItem="qot-ce-ExI" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3" id="vpW-bU-qVQ"/>
+                <constraint firstItem="qot-ce-ExI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rnf-CV-eL2"/>
                 <constraint firstItem="El9-UF-kMQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yPD-xw-CKk"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
     <resources>
-        <image name="tablet" width="1491" height="2400"/>
+        <image name="tablet" width="636" height="1024"/>
     </resources>
 </document>

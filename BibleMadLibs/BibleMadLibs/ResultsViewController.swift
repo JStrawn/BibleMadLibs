@@ -13,15 +13,20 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var madLibTextLabel: UITextView!
     @IBOutlet weak var classicButton: UIButton!
     @IBOutlet weak var stone: UIImageView!
+    @IBOutlet weak var saveButton: UIButton!
     
     var isClassic = false
     var finalPassage = String()
     let mysharedManager = DataAccessObject.sharedManager
-    
+    var isLoaded = false
     var userWords = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !isLoaded {
+            
+       
         mysharedManager.playStoneGrindSound()
         
         
@@ -57,8 +62,15 @@ class ResultsViewController: UIViewController {
         madLibTextLabel.text = editedPassage
         
         mysharedManager.currentPassage?.editedPassage = editedPassage
+        }
+        else{
+            saveButton.isEnabled = false
+            saveButton.backgroundColor = .black
+            saveButton.alpha = 0
+            madLibTextLabel.text = finalPassage
+        }
         
-
+        
     }
     
     
@@ -92,19 +104,26 @@ class ResultsViewController: UIViewController {
         
         stone.layer.add(groupAnimation, forKey: nil)
         CATransaction.commit()
-
+        
     }
     
     
     @IBAction func classicButtonPressed(_ sender: UIButton){
+        
+        var ogPassage:String
         
         if isClassic == true {
             madLibTextLabel.text = finalPassage
             classicButton.setTitle("Classic", for: .normal)
             isClassic = false
         }else{
-            var ogPassage:String = (mysharedManager.currentPassage?.oldPassage)!
+            if !isLoaded{
+            ogPassage = (mysharedManager.currentPassage?.oldPassage)!
             ogPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
+            }
+            else{
+            ogPassage = (mysharedManager.currentPassage?.oldPassage)!
+            }
             madLibTextLabel.text = ogPassage
             classicButton.setTitle("Mad Libs", for: .normal)
             isClassic = true
@@ -117,6 +136,39 @@ class ResultsViewController: UIViewController {
         
     }
     
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Add New Name", message: "", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+            alert -> Void in
+            
+            let firstTextField = alertController.textFields![0] as UITextField
+
+            let name = alertController.textFields?[0].text ?? "No name"
+            self.mysharedManager.savePassage(name: name)
+            
+            print("firstName \(firstTextField.text ?? "memes")")
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter a Save Name to remember this passage"
+        }
+    
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+        
+    }
     
     @IBAction func shareButton(_ sender: Any) {
         
