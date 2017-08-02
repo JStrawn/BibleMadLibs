@@ -106,7 +106,7 @@ class HomeScreenViewController: UIViewController {
         } else {
             self.mysharedManager.downloadDailyVerse(completion: { (dailyVerse) in
                 DispatchQueue.main.async {
-                    self.verseOfTheDayText.text = "Randomly Generated Bible Verse: \n \n\(dailyVerse)"
+                    self.verseOfTheDayText.text = "Words of wisdom: \n \n\(dailyVerse)"
                 }
             })
         

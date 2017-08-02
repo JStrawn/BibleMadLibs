@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="classicButton" destination="Z5O-9A-FH8" id="Ta9-tT-a5y"/>
                 <outlet property="madLibTextLabel" destination="dVR-lw-Tzk" id="eTo-Kj-tqm"/>
+                <outlet property="menuButton" destination="qot-ce-ExI" id="b8r-O8-lgE"/>
                 <outlet property="saveButton" destination="v5r-le-eMe" id="Kpc-bZ-Odt"/>
                 <outlet property="stone" destination="J6Q-PG-jDP" id="DRE-oW-dqN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -80,7 +81,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-ce-ExI" userLabel="Back to Menu">
-                    <rect key="frame" x="0.0" y="0.0" width="118" height="50"/>
+                    <rect key="frame" x="50" y="75" width="118" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.18698814655172413" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                     <state key="normal" title="Main Menu">
@@ -102,9 +103,9 @@
                 <constraint firstAttribute="trailing" secondItem="El9-UF-kMQ" secondAttribute="trailing" id="IAv-Jj-xbC"/>
                 <constraint firstAttribute="trailing" secondItem="J6Q-PG-jDP" secondAttribute="trailing" id="NcZ-LP-myO"/>
                 <constraint firstAttribute="trailing" secondItem="dVR-lw-Tzk" secondAttribute="trailing" constant="5" id="OPy-pO-A8Q"/>
-                <constraint firstItem="qot-ce-ExI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pfh-AA-vjC"/>
+                <constraint firstItem="qot-ce-ExI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="Pfh-AA-vjC"/>
                 <constraint firstItem="J6Q-PG-jDP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pgv-PS-YHi"/>
-                <constraint firstItem="qot-ce-ExI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rnf-CV-eL2"/>
+                <constraint firstItem="qot-ce-ExI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="rnf-CV-eL2"/>
                 <constraint firstItem="El9-UF-kMQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yPD-xw-CKk"/>
             </constraints>
             <point key="canvasLocation" x="24.5" y="52.5"/>

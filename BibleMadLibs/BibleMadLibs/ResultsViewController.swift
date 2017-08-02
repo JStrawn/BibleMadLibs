@@ -14,6 +14,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var classicButton: UIButton!
     @IBOutlet weak var stone: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
     
     var isClassic = false
     var finalPassage = String()
@@ -23,7 +24,8 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        menuButton.alpha = 0
+        menuButton.layer.cornerRadius = 20
         if !isLoaded {
             
        
@@ -82,6 +84,7 @@ class ResultsViewController: UIViewController {
         CATransaction.begin()
         CATransaction.setCompletionBlock({
             self.madLibTextLabel.fadeIn()
+            self.menuButton.fadeIn()
         })
         
         
