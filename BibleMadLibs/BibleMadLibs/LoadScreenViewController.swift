@@ -1,11 +1,3 @@
-//
-//  LoadScreenViewController.swift
-//  BibleMadLibs
-//
-//  Created by Maxwell Schneider on 8/2/17.
-//  Copyright © 2017 JStrawn. All rights reserved.
-//
-
 import UIKit
 
 class LoadScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {

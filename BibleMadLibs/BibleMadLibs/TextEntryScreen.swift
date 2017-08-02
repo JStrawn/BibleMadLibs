@@ -1,11 +1,3 @@
-//
-//  TextEntryScreen.swift
-//  BibleMadLibs
-//
-//  Created by Maxwell Schneider on 5/4/17.
-//  Copyright © 2017 JStrawn. All rights reserved.
-//
-
 import UIKit
 import QuartzCore
 
@@ -67,7 +59,7 @@ class TextEntryScreen: UIViewController, UITextFieldDelegate {
           }
           
           
-          textInputField.attributedPlaceholder = NSAttributedString(string: word,attributes: [NSForegroundColorAttributeName: UIColor.lightGray])
+          textInputField.attributedPlaceholder = NSAttributedString(string: word,attributes: [NSForegroundColorAttributeName: UIColor.lightGray, NSFontAttributeName: UIFont(name:"GelioKleftiko", size: 25)!])
           
           
      }

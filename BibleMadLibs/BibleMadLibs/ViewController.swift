@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  BibleMadLibs
-//
-//  Created by Juliana Strawn on 5/4/17.
-//  Copyright © 2017 JStrawn. All rights reserved.
-//
-
 import UIKit
 import QuartzCore
 
