@@ -1,11 +1,3 @@
-//
-//  ResultsViewController.swift
-//  BibleMadLibs
-//
-//  Created by Juliana Strawn on 5/4/17.
-//  Copyright © 2017 JStrawn. All rights reserved.
-//
-
 import UIKit
 
 class ResultsViewController: UIViewController {
@@ -39,7 +31,7 @@ class ResultsViewController: UIViewController {
         
         for word in userWords {
             
-            print(passage!)
+//            print(passage!)
             if let match = passage!.range(of: "\\<(.*?)\\>", options: .regularExpression) {
                 passage!.replaceSubrange(match, with: word)
                 
@@ -59,7 +51,7 @@ class ResultsViewController: UIViewController {
         editedPassage = editedPassage.replacingOccurrences(of: " :", with: ":")
         editedPassage = editedPassage.replacingOccurrences(of: " !", with: "!")
         
-        editedPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
+        editedPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!): \((mysharedManager.currentPassage?.lowerVerse)!)-\((mysharedManager.currentPassage?.upperVerse)!)"
         finalPassage = editedPassage
         madLibTextLabel.text = editedPassage
         
@@ -88,25 +80,6 @@ class ResultsViewController: UIViewController {
         })
         
         
-        let slideAnimation = CABasicAnimation(keyPath: "position.y")
-        slideAnimation.fromValue = self.view.frame.maxY + stone.frame.height
-        slideAnimation.toValue = self.view.frame.minY + stone.frame.height / 1.8
-        
-        
-        let shakeAnimation = CABasicAnimation(keyPath: "position.x")
-        shakeAnimation.repeatCount = 75
-        shakeAnimation.autoreverses = true
-        shakeAnimation.duration = 0.06
-        shakeAnimation.fromValue = self.view.frame.width/1.8 - 5
-        shakeAnimation.toValue =  self.view.frame.width/1.8 + 5
-        
-        
-        let groupAnimation = CAAnimationGroup()
-        groupAnimation.duration = 1.5
-        groupAnimation.animations = [slideAnimation, shakeAnimation]
-        
-        stone.layer.add(groupAnimation, forKey: nil)
-        CATransaction.commit()
         
     }
     
@@ -122,7 +95,7 @@ class ResultsViewController: UIViewController {
         }else{
             if !isLoaded{
             ogPassage = (mysharedManager.currentPassage?.oldPassage)!
-            ogPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!) \((mysharedManager.currentPassage?.lowerVerse)!):\((mysharedManager.currentPassage?.upperVerse)!)"
+            ogPassage += " \n\((mysharedManager.currentPassage?.bookName)!) \((mysharedManager.currentPassage?.chapter)!): \((mysharedManager.currentPassage?.lowerVerse)!)-\((mysharedManager.currentPassage?.upperVerse)!)"
             }
             else{
             ogPassage = (mysharedManager.currentPassage?.oldPassage)!
@@ -146,12 +119,11 @@ class ResultsViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
             alert -> Void in
             
-            let firstTextField = alertController.textFields![0] as UITextField
 
             let name = alertController.textFields?[0].text ?? "No name"
             self.mysharedManager.savePassage(name: name)
             
-            print("firstName \(firstTextField.text ?? "memes")")
+//            print("firstName \(firstTextField.text ?? "memes")")
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
@@ -172,6 +144,11 @@ class ResultsViewController: UIViewController {
         
         
     }
+    
+    override func viewDidLayoutSubviews() {
+        self.madLibTextLabel.setContentOffset(.zero, animated: false)
+    }
+    
     
     @IBAction func shareButton(_ sender: Any) {
         

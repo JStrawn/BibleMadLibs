@@ -1,11 +1,3 @@
-//
-//  DataAccessObject.swift
-//  BibleMadLibs
-//
-//  Created by Andy Wu on 5/4/17.
-//  Copyright © 2017 JStrawn. All rights reserved.
-//
-
 import Foundation
 import AVFoundation
 import UIKit
@@ -26,6 +18,7 @@ class DataAccessObject {
     var booksArray = [[String]]()
     
     var passageArray = [SavedPassage]()
+    
     
     func downloadPassage(book:String, chapter:Int, lowerVerse:Int, upperVerse:Int, completion:@escaping (_ text:String) -> Void) {
         
@@ -114,7 +107,7 @@ class DataAccessObject {
         
         self.downloadPassage(book: bookName, chapter: chapterNum, lowerVerse: lowerVerseNum, upperVerse: upperVerseNum, completion: { (passage) in
             var newPassage = passage
-            newPassage += "\n\((bookName)) \((chapterNum)) \((lowerVerseNum)):\((upperVerseNum))"
+            newPassage += "\n\((bookName)) \((chapterNum)):\((lowerVerseNum))"
             completion(newPassage)
             
         })
@@ -155,7 +148,7 @@ class DataAccessObject {
         var typesOfWords = [String]()
         
         let matches = self.matchesForRegexInText(regex: "\\<(.*?)\\>", text: blankPassage)
-        print(matches)
+//        print(matches)
 
 
         
@@ -167,23 +160,23 @@ class DataAccessObject {
             typesOfWords.append(finalEditedMatch)
         }
         
-        print("blanks count: \(typesOfWords)\n")
+//        print("blanks count: \(typesOfWords)\n")
         
         if typesOfWords.count < 10 {
-            print("Getting New passage\n")
+//            print("Getting New passage\n")
             self.getNewPassage(completion: {
-                print("Finished Getting New passage\n")
+//                print("Finished Getting New passage\n")
                 let newPassage = Passage(oldString: oldPassage, blankString: blankPassage, blanks: typesOfWords)
                 
                 DispatchQueue.main.async {
-                    print("Dispatching to main que!")
+//                    print("Dispatching to main queue!")
                     completion(newPassage)
                 }
                 
             })
         } else {
             //print(typesOfWords)
-            print("10 blanks found\n")
+//            print("10 blanks found\n")
             let newPassage = Passage(oldString: oldPassage, blankString: blankPassage, blanks: typesOfWords)
             
             completion(newPassage)
@@ -213,7 +206,7 @@ class DataAccessObject {
         
         var subtractBy = 5
         
-        if verseNum < 5 {
+        if verseNum <= 5 {
             verseNum = 5
             subtractBy = 4
         }
@@ -261,9 +254,9 @@ class DataAccessObject {
             let results = regex.matches(in: text, options: [], range: NSMakeRange(0, nsString.length))
             return results.map { nsString.substring(with: $0.range)}
             
-        } catch let error as NSError {
+        } catch _ as NSError {
             
-            print("invalid regex: \(error.localizedDescription)")
+//            print("invalid regex: \(error.localizedDescription)")
             
             return []
         }
@@ -274,8 +267,8 @@ class DataAccessObject {
         do {
             audioPlayer1 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource:"HeavenSound", ofType:"mp4")!))
             audioPlayer1.prepareToPlay()
-        } catch let error as NSError {
-            print(error.description)
+        } catch _ as NSError {
+//            print(error.description)
         }
         audioPlayer1.play()
     }
@@ -284,8 +277,8 @@ class DataAccessObject {
         do {
             audioPlayer2 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource:"StoneGrind", ofType:"mp4")!))
             audioPlayer2.prepareToPlay()
-        } catch let error as NSError {
-            print(error.description)
+        } catch _ as NSError {
+//            print(error.description)
         }
         audioPlayer2.play()
     }
@@ -294,8 +287,8 @@ class DataAccessObject {
         do {
             audioPlayer3 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource:"ThunderSound", ofType:"mp4")!))
             audioPlayer3.prepareToPlay()
-        } catch let error as NSError {
-            print(error.description)
+        } catch _ as NSError {
+//            print(error.description)
         }
         audioPlayer3.play()
     }
@@ -360,10 +353,10 @@ class DataAccessObject {
                 self.booksArray.removeLast()
                 
             } catch {
-                print("Failed to read text")
+//                print("Failed to read text")
             }
         } else {
-            print("Failed to load file from app bundle")
+//            print("Failed to load file from app bundle")
         }
     }
     

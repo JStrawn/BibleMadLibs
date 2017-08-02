@@ -171,7 +171,7 @@ class HomeScreenViewController: UIViewController {
     
     @IBAction func loadButtonPressed(_ sender: Any) {
         
-        let loadTableView = LoadTableVC()
+        let loadTableView = LoadScreenViewController()
         
         self.present(loadTableView, animated: true, completion: nil)
     }

@@ -38,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Left to go!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHg-fB-cZW">
-                    <rect key="frame" x="104" y="260" width="168" height="47"/>
+                    <rect key="frame" x="104" y="285" width="168" height="47"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
                     <color key="textColor" red="0.95628373300000002" green="1" blue="0.98524962869999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -97,7 +97,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="GH5-4u-ZLH" secondAttribute="trailing" constant="52" id="44c-oG-NxG"/>
                 <constraint firstItem="zTK-Zu-zwk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="75e-sv-hhL"/>
-                <constraint firstItem="WHg-fB-cZW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="7HG-8d-RFN"/>
+                <constraint firstItem="WHg-fB-cZW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-25" id="7HG-8d-RFN"/>
                 <constraint firstItem="xGf-2r-ZLi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="B0J-xq-eq9"/>
                 <constraint firstAttribute="trailing" secondItem="MCv-gO-gYC" secondAttribute="trailing" constant="22" id="CnY-H8-wBB"/>
                 <constraint firstItem="zTK-Zu-zwk" firstAttribute="top" secondItem="GH5-4u-ZLH" secondAttribute="bottom" constant="10" id="OoL-nn-YRx"/>
